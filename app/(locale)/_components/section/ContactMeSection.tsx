@@ -1,3 +1,7 @@
 export const ContactMeSection = () => {
-  return <div>ContactMeSection</div>;
+  return (
+    <div id="contact" className="min-h-screen">
+      ContactMeSection
+    </div>
+  );
 };
