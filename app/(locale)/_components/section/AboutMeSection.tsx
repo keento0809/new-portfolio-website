@@ -1,3 +1,7 @@
 export const AboutMeSection = () => {
-  return <div>AboutMeSection</div>;
+  return (
+    <div id="aboutMe" className="min-h-screen">
+      AboutMeSection
+    </div>
+  );
 };
