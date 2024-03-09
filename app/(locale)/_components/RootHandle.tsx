@@ -1,3 +1,4 @@
+import { Header } from "@/components/layout/Header";
 import { FC } from "react";
 
 type RootHandleProps = {
@@ -5,5 +6,10 @@ type RootHandleProps = {
 };
 
 export const RootHandle: FC<RootHandleProps> = ({ children }) => {
-  return <div>{children}</div>;
+  return (
+    <>
+      <Header />
+      <div className="">{children}</div>
+    </>
+  );
 };
