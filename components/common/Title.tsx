@@ -8,8 +8,8 @@ type TitleProps = {
 
 export const Title: FC<TitleProps> = ({ titleText }) => {
   return (
-    <div className="w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 relative z-20">
+    <div className="w-full flex flex-col items-center justify-center overflow-hidden rounded-md bg-transparent">
+      <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 relative z-20">
         {titleText}
       </h1>
       <div className="w-[40rem] h-10 relative">
