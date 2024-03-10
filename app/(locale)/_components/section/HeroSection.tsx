@@ -6,6 +6,7 @@ import {
   TYPEWRITER_TEXT_SECOND_PARAGRAPH,
   TYPEWRITER_TEXT_THIRD_PARAGRAPH,
 } from "@/constants/components/section/heroSection";
+import { MotionLinkButton } from "@/app/_components/ui/MotionLinkButton";
 
 export const HeroSection = () => {
   return (
@@ -18,6 +19,9 @@ export const HeroSection = () => {
           <TypewriterText words={TYPEWRITER_TEXT_FIRST_PARAGRAPH} />
           <TypewriterText words={TYPEWRITER_TEXT_SECOND_PARAGRAPH} delay={3} />
           <TypewriterText words={TYPEWRITER_TEXT_THIRD_PARAGRAPH} delay={5} />
+        </div>
+        <div className="z-50">
+          <MotionLinkButton buttonText="Explore" link="#projects" />
         </div>
       </div>
       <BackgroundBeams />
