@@ -4,6 +4,10 @@ export const MyHobby = () => {
   return (
     <div>
       <h2>Hobbies</h2>
+      <p>
+        Aside from things regarding my skills, I would like to introduce what I
+        love to do a little.
+      </p>
       <ul>
         {MY_HOBBY_CONTENTS.map((hobby) => {
           return (
