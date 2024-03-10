@@ -1,9 +1,12 @@
-import { Title } from "@/components/common/Title";
+import { Button } from "@/components/common/Button";
 
 export const ContactMeSection = () => {
   return (
     <div id="contact" className="min-h-screen">
-      <Title titleText="Contact" />
+      ContactMeSection
+      <div>
+        <Button buttonText="Say Hello" />
+      </div>
     </div>
   );
 };
