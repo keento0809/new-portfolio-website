@@ -101,6 +101,7 @@ export const TypewriterEffectSmooth = ({
   words,
   className,
   cursorClassName,
+  delay,
 }: {
   words: {
     text: string;
@@ -108,6 +109,7 @@ export const TypewriterEffectSmooth = ({
   }[];
   className?: string;
   cursorClassName?: string;
+  delay?: number;
 }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
@@ -151,7 +153,7 @@ export const TypewriterEffectSmooth = ({
         transition={{
           duration: 2,
           ease: "linear",
-          delay: 1,
+          delay: delay ?? 1,
         }}
       >
         <div
@@ -163,7 +165,7 @@ export const TypewriterEffectSmooth = ({
           {renderWords()}{" "}
         </div>{" "}
       </motion.div>
-      <motion.span
+      {/* <motion.span
         initial={{
           opacity: 0,
         }}
@@ -180,7 +182,7 @@ export const TypewriterEffectSmooth = ({
           "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500",
           cursorClassName
         )}
-      ></motion.span>
+      ></motion.span> */}
     </div>
   );
 };
