@@ -12,8 +12,10 @@ export const AboutMeSection = () => {
       <div className="mt-10">
         <Title titleText="About Me" />
       </div>
-      <Profile />
-      <MySkills />
+      <div className="flex flex-col lg:gap-14">
+        <Profile />
+        <MySkills />
+      </div>
       <BackgroundBeams />
     </div>
   );
