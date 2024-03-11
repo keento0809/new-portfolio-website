@@ -2,6 +2,7 @@ import { Title } from "@/components/common/Title";
 import { Profile } from "@/app/(locale)/_components/section/aboutMe/Profile";
 import { MySkills } from "./aboutMe/MySkills";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import { ProfileContentsTab } from "./aboutMe/ProfileContentsTab";
 
 export const AboutMeSection = () => {
   return (
@@ -14,7 +15,7 @@ export const AboutMeSection = () => {
       </div>
       <div className="flex flex-col lg:gap-14">
         <Profile />
-        <MySkills />
+        <ProfileContentsTab />
       </div>
       <BackgroundBeams />
     </div>
