@@ -10,6 +10,7 @@ export function Profile() {
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <Image src="/assets/test-avatar.jpg" fill alt="test-image" />
         </div>
+        <div className="">{/* TODO: Add text later? */}</div>
       </PinContainer>
     </div>
   );
