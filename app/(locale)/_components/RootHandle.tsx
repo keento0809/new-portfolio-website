@@ -1,3 +1,4 @@
+import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ScrollHeader } from "@/components/layout/ScrollHeader";
 import { FC } from "react";
@@ -12,6 +13,7 @@ export const RootHandle: FC<RootHandleProps> = ({ children }) => {
       <Header />
       <ScrollHeader />
       <div className="">{children}</div>
+      <Footer />
     </>
   );
 };
