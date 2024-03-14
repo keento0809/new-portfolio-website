@@ -1,4 +1,4 @@
-import { ProjectSection } from "../_components/section/ProjectSection";
+import { ProjectSection } from "./_components/ProjectSection";
 
 export default function Projects() {
   return <ProjectSection />;

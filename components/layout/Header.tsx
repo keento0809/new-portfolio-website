@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
 import { cn } from "@/utils/cn";
+import Link from "next/link";
 
 export function Header() {
   return <Navbar />;
@@ -13,8 +14,8 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div className={cn("absolute top-2 inset-x-0 mx-auto z-50", className)}>
       <Menu setActive={setActive}>
-        <div>K.H</div>
-        <div className="w-full flex justify-end gap-x-12">
+        <Link href={"/"}>K.H</Link>
+        <div className="w-full flex justify-end items-center gap-x-12">
           <MenuItem setActive={setActive} active={active} item="Projects">
             <div className="text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem

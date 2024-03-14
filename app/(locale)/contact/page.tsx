@@ -1,4 +1,4 @@
-import { ContactMeSection } from "../_components/section/ContactMeSection";
+import { ContactMeSection } from "./_components/ContactMeSection";
 
 export default function Contact() {
   return <ContactMeSection />;

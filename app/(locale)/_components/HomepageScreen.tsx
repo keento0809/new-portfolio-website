@@ -1,6 +1,6 @@
 "use client";
 
-import { HeroSection } from "./section/HeroSection";
+import { HeroSection } from "./HeroSection";
 
 export const HomepageScreen = () => {
   return (

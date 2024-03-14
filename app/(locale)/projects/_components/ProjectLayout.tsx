@@ -4,7 +4,8 @@ import { LayoutGrid } from "@/components/ui/layout-grid";
 
 export const ProjectLayout = () => {
   return (
-    <div className="h-screen w-[1024px] mx-auto z-50">
+    // TODO: fix height with calc later
+    <div className="h-[80vh] w-[1024px] mx-auto z-50">
       <LayoutGrid cards={cards} />
     </div>
   );

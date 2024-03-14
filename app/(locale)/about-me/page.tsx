@@ -1,4 +1,4 @@
-import { AboutMeSection } from "../_components/section/AboutMeSection";
+import { AboutMeSection } from "./_components/AboutMeSection";
 
 export default function AboutMe() {
   return <AboutMeSection />;

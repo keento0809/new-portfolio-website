@@ -10,7 +10,7 @@ import { MotionLinkButton } from "@/app/_components/ui/MotionLinkButton";
 
 export const HeroSection = () => {
   return (
-    <div
+    <section
       id="hero"
       className="min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
     >
@@ -21,10 +21,10 @@ export const HeroSection = () => {
           <TypewriterText words={TYPEWRITER_TEXT_THIRD_PARAGRAPH} delay={5} />
         </div>
         <div className="z-50">
-          <MotionLinkButton buttonText="Explore" link="#projects" />
+          <MotionLinkButton buttonText="Explore" link="/projects" />
         </div>
       </div>
       <BackgroundBeams />
-    </div>
+    </section>
   );
 };
