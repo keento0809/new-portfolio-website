@@ -4,8 +4,8 @@ import { FOOTER_TEXT } from "@/constants/components/layout/footer";
 
 export const Footer = () => {
   return (
-    <div className="text-xs bg-neutral-950 text-primary-color w-full rounded-md relative flex flex-col items-center justify-center antialiased">
-      <p>{FOOTER_TEXT}</p>
+    <div className="pb-3 bg-[#0a0a0a] w-full text-xs rounded-md flex flex-col items-center justify-center antialiased">
+      <p className="text-primary-color">{FOOTER_TEXT}</p>
     </div>
   );
 };

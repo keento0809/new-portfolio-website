@@ -46,7 +46,7 @@ export const ContactMeSection = () => {
     >
       <Title titleText="Contact" />
       <div className="flex flex-col md:gap-8 lg:gap-14">
-        <div className="text-center text-base md:text-xl font-medium">
+        <div className="text-center text-base md:text-lg font-medium">
           <TextGenerateEffect
             className="z-50"
             words={CONTACT_ME_FIRST_DESCRIPTION}
