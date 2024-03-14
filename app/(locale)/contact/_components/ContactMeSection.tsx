@@ -40,9 +40,9 @@ const ContactMethodIcon = ({ name }: { name: string }) => {
 
 export const ContactMeSection = () => {
   return (
-    <div
+    <section
       id="contact"
-      className="min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
+      className="pt-20 pb-32 min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
     >
       <Title titleText="Contact" />
       <div className="flex flex-col md:gap-8 lg:gap-14">
@@ -72,6 +72,6 @@ export const ContactMeSection = () => {
         </div>
       </div>
       <BackgroundBeams />
-    </div>
+    </section>
   );
 };

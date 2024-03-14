@@ -1,16 +1,11 @@
 "use client";
-import { AboutMeSection } from "./section/AboutMeSection";
-import { HeroSection } from "./section/HeroSection";
-import { ProjectSection } from "./section/ProjectSection";
-import { ContactMeSection } from "./section/ContactMeSection";
+
+import { HeroSection } from "./HeroSection";
 
 export const HomepageScreen = () => {
   return (
     <>
       <HeroSection />
-      <ProjectSection />
-      <AboutMeSection />
-      <ContactMeSection />
     </>
   );
 };

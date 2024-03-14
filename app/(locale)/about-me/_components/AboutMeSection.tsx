@@ -1,14 +1,14 @@
 import { Title } from "@/components/common/Title";
-import { Profile } from "@/app/(locale)/_components/section/aboutMe/Profile";
-import { MySkills } from "./aboutMe/MySkills";
+import { Profile } from "@/app/(locale)/about-me/_components/Profile";
+import { MySkills } from "./MySkills";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import { ProfileContentsTab } from "./aboutMe/ProfileContentsTab";
+import { ProfileContentsTab } from "./ProfileContentsTab";
 
 export const AboutMeSection = () => {
   return (
-    <div
+    <section
       id="aboutMe"
-      className="min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
+      className="pt-20 pb-32 min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
     >
       <div className="mt-10">
         <Title titleText="About Me" />
@@ -18,6 +18,6 @@ export const AboutMeSection = () => {
         <ProfileContentsTab />
       </div>
       <BackgroundBeams />
-    </div>
+    </section>
   );
 };
