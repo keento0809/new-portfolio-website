@@ -46,21 +46,21 @@ export const ContactMeSection = () => {
     >
       <Title titleText="Contact" />
       <div className="flex flex-col md:gap-8 lg:gap-14">
-        <div className="text-center text-base md:text-xl font-medium">
+        <div className="text-center text-base md:text-lg font-medium">
           <TextGenerateEffect
             className="z-50"
             words={CONTACT_ME_FIRST_DESCRIPTION}
           />
           <TextGenerateEffect delay={2} words={CONTACT_ME_SECOND_DESCRIPTION} />
         </div>
-        <div className="flex justify-center items-center md:gap-8">
+        <div className="flex justify-center items-center md:gap-8 z-30">
           {CONTACT_METHOD_ARRAY.map((method) => {
             return (
               <Link
                 key={method.name}
                 href={method.href ?? ""}
                 target="_blank"
-                className="cursor-pointer"
+                className="cursor-pointer hover:scale-125 transition-all ease-in-out"
               >
                 <ContactMethodIcon name={method.name} />
               </Link>
