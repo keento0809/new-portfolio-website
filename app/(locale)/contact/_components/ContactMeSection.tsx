@@ -42,9 +42,11 @@ export const ContactMeSection = () => {
   return (
     <section
       id="contact"
-      className="pt-20 pb-32 min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
+      className="pt-20 min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-start antialiased"
     >
-      <Title titleText="Contact" />
+      <div className="mt-6">
+        <Title titleText="Contact" />
+      </div>
       <div className="flex flex-col md:gap-8 lg:gap-14">
         <div className="text-center text-base md:text-lg font-medium">
           <TextGenerateEffect

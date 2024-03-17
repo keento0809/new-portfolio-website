@@ -35,7 +35,7 @@ export const TypewriterEffect = ({
           opacity: 1,
         },
         {
-          duration: 0.3,
+          duration: 0.2,
           delay: stagger(0.1),
           ease: "easeInOut",
         }
@@ -54,7 +54,7 @@ export const TypewriterEffect = ({
                   initial={{}}
                   key={`char-${index}`}
                   className={cn(
-                    `dark:text-white text-black opacity-0 hidden`,
+                    `text-primary-color opacity-0 hidden`,
                     word.className
                   )}
                 >
@@ -127,10 +127,7 @@ export const TypewriterEffectSmooth = ({
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
-                  className={cn(
-                    `bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600`,
-                    word.className
-                  )}
+                  className={cn(`text-primary-color`, word.className)}
                 >
                   {char}
                 </span>
@@ -144,7 +141,7 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex space-x-1 my-4", className)}>
+    <div className={cn("flex space-x-1 my-6", className)}>
       <motion.div
         className="overflow-hidden pb-2"
         initial={{
@@ -154,7 +151,7 @@ export const TypewriterEffectSmooth = ({
           width: "fit-content",
         }}
         transition={{
-          duration: 1.8,
+          duration: 1.5,
           ease: "linear",
           delay: delay ?? 1,
         }}

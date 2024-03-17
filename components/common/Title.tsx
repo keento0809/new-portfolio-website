@@ -13,7 +13,7 @@ export const Title: FC<TitleProps> = ({ titleText }) => {
       <h1 className="md:text-2xl text-xl lg:text-4xl font-bold text-center text-primary-color relative z-20">
         {titleText}
       </h1>
-      <div className="w-[40rem] h-40 relative">
+      <div className="w-[40rem] h-16 relative">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />

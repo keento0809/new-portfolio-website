@@ -60,20 +60,17 @@ export const MenuItem = ({
   );
 };
 
-export const Menu = ({
-  setActive,
-  children,
-}: {
-  setActive: (item: string | null) => void;
-  children: React.ReactNode;
-}) => {
+export const Menu = ({ children }: { children: React.ReactNode }) => {
   return (
-    <nav
-      onMouseLeave={() => setActive(null)} // resets the state
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 8 } }}
+      transition={{ duration: 2, ease: "linear" }}
+      viewport={{ once: true }}
       className="relative rounded-full boder border-transparent dark:bg-black dark:border-white/[0.2] bg-transparent shadow-input flex justify-end gap-x-12 px-6 lg:px-32 py-6 "
     >
       {children}
-    </nav>
+    </motion.div>
   );
 };
 

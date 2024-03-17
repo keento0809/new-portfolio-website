@@ -10,7 +10,7 @@ export const AboutMeSection = () => {
       id="aboutMe"
       className="pt-20 pb-32 min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
     >
-      <div className="mt-10">
+      <div className="mt-6">
         <Title titleText="About Me" />
       </div>
       <div className="flex flex-col lg:gap-14">

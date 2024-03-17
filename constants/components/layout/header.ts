@@ -7,10 +7,10 @@ export type HeaderMenuItem = {
 };
 
 const HEADER_MENU_ITEMS: HeaderMenuItem[] = [
-  { name: "Home", link: "#hero" },
-  { name: "Projects", link: "#projects" },
-  { name: "About Me", link: "#aboutMe" },
-  { name: "Contact", link: "#contact" },
+  { name: "Projects", link: "/projects" },
+  { name: "About Me", link: "/about-me" },
+  { name: "Contact", link: "/contact" },
+  { name: "Resume", link: "/resume" },
 ];
 
 export { HEADER_MENU_ITEMS };
