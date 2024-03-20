@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { FC, useState } from "react";
 import { Menu } from "../ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
@@ -12,8 +12,11 @@ export function Header() {
   return <Navbar />;
 }
 
-function Navbar({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null);
+type NavbarProps = {
+  className?: string;
+};
+
+const Navbar: FC<NavbarProps> = ({ className }) => {
   const pathname = usePathname();
   // const { resumeURL } = useHeader();
   return (
@@ -29,9 +32,9 @@ function Navbar({ className }: { className?: string }) {
                 "block hover:text-blue-500 ease-in-out transition-all",
                 menu.link === pathname && "text-blue-500"
               )}
-              // target={menu.target}
-              // rel="noopener noreferrer"
-              // locale={false}
+              target={menu.target}
+              rel="noopener noreferrer"
+              locale={false}
             >
               {menu.name}
             </Link>
@@ -40,4 +43,4 @@ function Navbar({ className }: { className?: string }) {
       </Menu>
     </div>
   );
-}
+};
