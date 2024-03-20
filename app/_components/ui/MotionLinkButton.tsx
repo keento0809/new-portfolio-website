@@ -6,11 +6,13 @@ import { FC } from "react";
 type MotionLinkButtonProps = {
   buttonText: string;
   link: string;
+  delay: number;
 };
 
 export const MotionLinkButton: FC<MotionLinkButtonProps> = ({
   buttonText,
   link,
+  delay,
 }) => {
   return (
     <motion.div
@@ -21,7 +23,7 @@ export const MotionLinkButton: FC<MotionLinkButtonProps> = ({
       whileInView={{
         width: "fit-content",
       }}
-      transition={{ duration: 1, ease: "linear", delay: 7 }}
+      transition={{ duration: 1, ease: "linear", delay }}
       viewport={{ once: true }}
     >
       <Link href={link} className="h-14 w-28 inline-block cursor-pointer">

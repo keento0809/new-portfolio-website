@@ -21,7 +21,7 @@ export const HeroSection = () => {
           <TypewriterText words={TYPEWRITER_TEXT_THIRD_PARAGRAPH} delay={5} />
         </div>
         <div className="z-50">
-          <MotionLinkButton buttonText="Explore" link="/projects" />
+          <MotionLinkButton buttonText="Explore" link="/projects" delay={7} />
         </div>
       </div>
       <BackgroundBeams />

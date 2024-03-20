@@ -1,11 +1,14 @@
 "use client";
 
-import { Button } from "@/components/common/Button";
+import { MotionLinkButton } from "@/app/_components/ui/MotionLinkButton";
 import { Title } from "@/components/common/Title";
-import { EmailIcon } from "@/components/icons/EmailIcon";
-import { GitHubIcon } from "@/components/icons/GitHubIcon";
-import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
-import { PhoneIcon } from "@/components/icons/PhoneIcon";
+import {
+  EmailIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  ResumeIcon,
+  PhoneIcon,
+} from "@/components/icons";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import {
@@ -29,8 +32,8 @@ const ContactMethodIcon = ({ name }: { name: string }) => {
     case "GITHUB": {
       return <GitHubIcon />;
     }
-    case "DEV": {
-      return null;
+    case "RESUME": {
+      return <ResumeIcon />;
     }
     default: {
       return null;
@@ -69,8 +72,14 @@ export const ContactMeSection = () => {
             );
           })}
         </div>
-        <div className="w-full flex justify-center items-center">
-          <Button buttonText="Say Hello" />
+        <div className="w-full flex items-center justify-center">
+          <div className="min-w-[112px] z-50">
+            <MotionLinkButton
+              buttonText="Say Hello"
+              link={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL ?? ""}`}
+              delay={5}
+            />
+          </div>
         </div>
       </div>
       <BackgroundBeams />
