@@ -106,15 +106,25 @@ export interface IProfileImage extends Entry<IProfileImageFields> {
   };
 }
 
+export interface ProjectData {
+  gitHubUrl: string;
+  languages: { name: string }[];
+  linkUrl: string;
+  points: { text: string }[];
+  projectTitle: string;
+  summary: string;
+}
+
 export interface IProjectFields {
   /** title */
   title: string;
 
   /** projectData */
-  projectData: Record<string, any>;
+  projectData: ProjectData;
 }
 
 export interface IProject extends Entry<IProjectFields> {
+  contentTypeId: "project";
   sys: {
     id: string;
     type: string;
@@ -131,12 +141,26 @@ export interface IProject extends Entry<IProjectFields> {
   };
 }
 
+export interface MyResume {
+  fields: {
+    title: string;
+    description: string;
+    file: {
+      contentType: string;
+      details: { size: number };
+      fileName: string;
+      url: string;
+    };
+  };
+}
+
 export interface IResumeFields {
   /** my_resume */
-  myResume: Asset;
+  myResume: MyResume;
 }
 
 export interface IResume extends Entry<IResumeFields> {
+  contentTypeId: "resume";
   sys: {
     id: string;
     type: string;
