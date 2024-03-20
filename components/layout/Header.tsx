@@ -6,11 +6,11 @@ import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { HEADER_MENU_ITEMS } from "@/constants/components/layout/header";
 import { usePathname } from "next/navigation";
-// import { useHeader } from "./_hooks/useHeader";
+import { useHeader } from "./_hooks/useHeader";
 
 export const Header: FC = () => {
   const pathname = usePathname();
-  // const { resumeURL } = useHeader();
+  const { resumeURL } = useHeader();
   return (
     <div className="absolute top-2 inset-x-0 mx-auto z-50">
       <Menu>
