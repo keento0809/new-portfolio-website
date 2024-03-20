@@ -6,6 +6,8 @@ import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { HEADER_MENU_ITEMS } from "@/constants/components/layout/header";
 import { usePathname } from "next/navigation";
+import { useContentful } from "@/app/(locale)/_hooks/useContentful";
+import { useHeader } from "./_hooks/useHeader";
 
 export function Header() {
   return <Navbar />;
@@ -14,6 +16,7 @@ export function Header() {
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   const pathname = usePathname();
+  const { resumeURL } = useHeader();
   return (
     <div className={cn("absolute top-2 inset-x-0 mx-auto z-50", className)}>
       <Menu>
@@ -22,7 +25,7 @@ function Navbar({ className }: { className?: string }) {
           {HEADER_MENU_ITEMS.map((menu) => (
             <Link
               key={menu.name}
-              href={menu.link}
+              href={menu.name === "Resume" ? resumeURL : menu.link}
               className={cn(
                 "block hover:text-blue-500 ease-in-out transition-all",
                 menu.link === pathname && "text-blue-500"
