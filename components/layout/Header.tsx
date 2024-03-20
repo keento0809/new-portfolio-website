@@ -31,8 +31,8 @@ function Navbar({ className }: { className?: string }) {
                 menu.link === pathname && "text-blue-500"
               )}
               target={menu.target}
-              rel="noopener noreferrer"
-              locale={false}
+              // rel="noopener noreferrer"
+              // locale={false}
             >
               {menu.name}
             </Link>
