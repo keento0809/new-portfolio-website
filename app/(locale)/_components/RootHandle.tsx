@@ -1,5 +1,5 @@
 import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
+// import { Header } from "@/components/layout/Header";
 import { FC } from "react";
 
 type RootHandleProps = {
@@ -9,7 +9,7 @@ type RootHandleProps = {
 export const RootHandle: FC<RootHandleProps> = ({ children }) => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="">{children}</div>
       <Footer />
     </>
