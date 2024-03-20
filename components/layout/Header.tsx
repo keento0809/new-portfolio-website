@@ -6,21 +6,13 @@ import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { HEADER_MENU_ITEMS } from "@/constants/components/layout/header";
 import { usePathname } from "next/navigation";
-import { useHeader } from "./_hooks/useHeader";
+// import { useHeader } from "./_hooks/useHeader";
 
-export function Header() {
-  return <Navbar />;
-}
-
-type NavbarProps = {
-  className?: string;
-};
-
-const Navbar: FC<NavbarProps> = ({ className }) => {
+export const Header: FC = () => {
   const pathname = usePathname();
   // const { resumeURL } = useHeader();
   return (
-    <div className={cn("absolute top-2 inset-x-0 mx-auto z-50", className)}>
+    <div className="absolute top-2 inset-x-0 mx-auto z-50">
       <Menu>
         <Link href={"/"}>K.H</Link>
         <div className="text-primary-color text-xs w-full flex justify-end items-center gap-x-12 ">
