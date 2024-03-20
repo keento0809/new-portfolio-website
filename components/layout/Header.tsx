@@ -7,7 +7,11 @@ import { HEADER_MENU_ITEMS } from "@/constants/components/layout/header";
 import { usePathname } from "next/navigation";
 import { useHeader } from "./_hooks/useHeader";
 
-export const Header = ({ className }: { className?: string }) => {
+export function Header() {
+  return <Navbar />;
+}
+
+function Navbar({ className }: { className?: string }) {
   const pathname = usePathname();
   const { resumeURL } = useHeader();
   return (
@@ -35,4 +39,4 @@ export const Header = ({ className }: { className?: string }) => {
       </Menu>
     </div>
   );
-};
+}
