@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useContentful } from "@/app/(locale)/_hooks/useContentful";
 
-export const useContactMeSection = () => {
+export const useHeader = () => {
   const { getResume } = useContentful();
   const [resumeURL, setResumeURL] = useState("");
 

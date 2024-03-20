@@ -43,7 +43,7 @@ const ContactMethodIcon = ({ name }: { name: string }) => {
 };
 
 export const ContactMeSection = () => {
-  const { resume } = useContactMeSection();
+  const { resumeURL } = useContactMeSection();
   return (
     <section
       id="contact"
@@ -65,7 +65,7 @@ export const ContactMeSection = () => {
             return (
               <Link
                 key={method.name}
-                href={method.href ?? ""}
+                href={method.name === "RESUME" ? resumeURL : method.href}
                 target="_blank"
                 className="cursor-pointer hover:scale-125 transition-all ease-in-out"
               >
@@ -79,12 +79,9 @@ export const ContactMeSection = () => {
             <MotionLinkButton
               buttonText="Say Hello"
               link={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL ?? ""}`}
-              delay={5}
+              delay={4}
             />
           </div>
-        </div>
-        <div className="mt-8 font-bold text-base text-orange-500">
-          {resume.substring(3, 5)}だよ
         </div>
       </div>
       <BackgroundBeams />

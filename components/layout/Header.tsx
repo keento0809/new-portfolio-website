@@ -6,12 +6,12 @@ import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { HEADER_MENU_ITEMS } from "@/constants/components/layout/header";
 import { usePathname } from "next/navigation";
+import { useHeader } from "./_hooks/useHeader";
 
 export const Header: FC = () => {
   const pathname = usePathname();
-  const isResume = (resumeURL: string | undefined): resumeURL is string => {
-    return !!resumeURL;
-  };
+  const { resumeURL } = useHeader();
+
   return (
     <div className="absolute top-2 inset-x-0 mx-auto z-50">
       <Menu>
@@ -20,12 +20,7 @@ export const Header: FC = () => {
           {HEADER_MENU_ITEMS.map((menu) => (
             <Link
               key={menu.name}
-              href={
-                menu.name === "Resume" &&
-                isResume(process.env.NEXT_PUBLIC_RESUME_URL)
-                  ? process.env.NEXT_PUBLIC_RESUME_URL
-                  : menu.link
-              }
+              href={menu.name === "Resume" ? resumeURL : menu.link}
               className={cn(
                 "block hover:text-blue-500 ease-in-out transition-all",
                 menu.link === pathname && "text-blue-500"
