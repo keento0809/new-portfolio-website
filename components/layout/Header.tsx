@@ -25,12 +25,14 @@ function Navbar({ className }: { className?: string }) {
           {HEADER_MENU_ITEMS.map((menu) => (
             <Link
               key={menu.name}
-              href={menu.name === "Resume" ? resumeURL : menu.link}
+              href={menu.link}
               className={cn(
                 "block hover:text-blue-500 ease-in-out transition-all",
                 menu.link === pathname && "text-blue-500"
               )}
               target={menu.target}
+              rel="noopener noreferrer"
+              locale={false}
             >
               {menu.name}
             </Link>
