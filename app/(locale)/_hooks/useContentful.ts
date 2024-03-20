@@ -28,7 +28,6 @@ const getProjects = async (): Promise<IResumeFields[] | undefined> => {
     const entries = await client.getEntries<IProject>({
       content_type: "project",
     });
-    console.log("projects: ", entries);
     const entryFields = entries.items[0].fields as IResumeFields[];
     return entryFields;
   } catch (error) {}
