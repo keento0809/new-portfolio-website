@@ -25,6 +25,7 @@ export const Header = ({ className }: { className?: string }) => {
                 menu.link === pathname && "text-blue-500"
               )}
               target={menu.target}
+              passHref
             >
               {menu.name}
             </Link>
