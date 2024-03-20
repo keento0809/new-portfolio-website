@@ -12,7 +12,7 @@ const HEADER_MENU_ITEMS: HeaderMenuItem[] = [
   { name: "Projects", link: "/projects" },
   { name: "About Me", link: "/about-me" },
   { name: "Contact", link: "/contact" },
-  { name: "Resume", link: "/", target: "_blank" },
+  { name: "Resume", link: "/" },
 ];
 
 export { HEADER_MENU_ITEMS };

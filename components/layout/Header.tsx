@@ -26,6 +26,7 @@ export const Header = ({ className }: { className?: string }) => {
               )}
               target={menu.target}
               passHref
+              rel="noopener noreferrer"
             >
               {menu.name}
             </Link>
