@@ -5,7 +5,7 @@ import {
 } from "@/@types/generated/contentful";
 import { createClient } from "contentful";
 
-const client = createClient({
+export const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID ?? "",
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN ?? "",
   host: process.env.NEXT_PUBLIC_CONTENTFUL_HOST,

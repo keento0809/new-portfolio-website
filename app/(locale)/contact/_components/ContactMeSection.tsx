@@ -17,6 +17,7 @@ import {
   CONTACT_ME_SECOND_DESCRIPTION,
 } from "@/constants/components/section/contactMeSection";
 import Link from "next/link";
+import { useContactMeSection } from "../_hooks/useContactMeSection";
 
 const ContactMethodIcon = ({ name }: { name: string }) => {
   switch (name) {
@@ -42,6 +43,7 @@ const ContactMethodIcon = ({ name }: { name: string }) => {
 };
 
 export const ContactMeSection = () => {
+  const { resume } = useContactMeSection();
   return (
     <section
       id="contact"
@@ -80,6 +82,9 @@ export const ContactMeSection = () => {
               delay={5}
             />
           </div>
+        </div>
+        <div className="mt-8 font-bold text-base text-orange-500">
+          {resume.substring(3, 5)}だよ
         </div>
       </div>
       <BackgroundBeams />
