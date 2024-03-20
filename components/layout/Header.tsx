@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC } from "react";
 import { Menu } from "../ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
@@ -18,7 +18,7 @@ type NavbarProps = {
 
 const Navbar: FC<NavbarProps> = ({ className }) => {
   const pathname = usePathname();
-  // const { resumeURL } = useHeader();
+  const { resumeURL } = useHeader();
   return (
     <div className={cn("absolute top-2 inset-x-0 mx-auto z-50", className)}>
       <Menu>
