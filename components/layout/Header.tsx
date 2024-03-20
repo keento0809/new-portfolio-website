@@ -30,7 +30,7 @@ function Navbar({ className }: { className?: string }) {
                 "block hover:text-blue-500 ease-in-out transition-all",
                 menu.link === pathname && "text-blue-500"
               )}
-              target={menu.target}
+              // target={menu.target}
               // rel="noopener noreferrer"
               // locale={false}
             >
