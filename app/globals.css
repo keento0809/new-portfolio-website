@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "../node_modules/devicon/devicon.min.css";
 
 @layer components {
   .text-primary-color {

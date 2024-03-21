@@ -121,7 +121,7 @@ export interface IProjectFields {
     title: string;
 
     /** projectData */
-    projectData: ProjectData;
+    projectData: ProjectData[];
   };
 }
 
@@ -184,10 +184,11 @@ export interface ISkillSetListFields {
   title: string;
 
   /** SkillSetList */
-  skillSetList: Record<string, any>;
+  skillSetList: Record<"name", string>[];
 }
 
 export interface ISkillSetList extends Entry<ISkillSetListFields> {
+  contentTypeId: "skillSetList";
   sys: {
     id: string;
     type: string;

@@ -25,7 +25,7 @@ export const ProjectLayout: FC<ProjectLayoutProps> = ({
       : "";
     return {
       id: idx + 1,
-      content: <Skeleton project={project} />,
+      content: <ProjectCard project={project} />,
       className: "col-span-1",
       thumbnail: thumbnailURL,
     };
@@ -38,14 +38,14 @@ export const ProjectLayout: FC<ProjectLayoutProps> = ({
   );
 };
 
-const Skeleton = ({ project }: { project: IProjectFields }) => {
+const ProjectCard = ({ project }: { project: IProjectFields }) => {
+  const projectTitle = project.fields.title;
+  const { summary } = project.fields.projectData[0];
   return (
     <div className="cursor-pointer">
-      <p className="font-bold text-4xl text-white">House in the woods</p>
-      <p className="font-normal text-base text-white"></p>
+      <p className="font-bold text-4xl text-white">{projectTitle}</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+        {summary}
       </p>
     </div>
   );
