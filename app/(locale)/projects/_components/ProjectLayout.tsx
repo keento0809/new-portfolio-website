@@ -17,7 +17,6 @@ export const ProjectLayout: FC<ProjectLayoutProps> = ({
   thumbnails,
 }) => {
   const cards = projects.map((project, idx) => {
-    console.log("pjds: ", project.fields.projectData[0].summary);
     const correspondThumbnail = thumbnails.find(
       (t) => t.fields.title === project.fields.title
     );

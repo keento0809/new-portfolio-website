@@ -4,6 +4,8 @@ import {
   IProjectFields,
   IResume,
   IResumeFields,
+  ISkillSetList,
+  ISkillSetListFields,
   IThumbnail,
   IThumbnailFields,
 } from "@/@types/generated/contentful";
@@ -20,6 +22,21 @@ const getResume = async (): Promise<IResumeFields | undefined> => {
     const entry = await client.getEntries<IResume>({ content_type: "resume" });
     const entryField = entry.items[0].fields as IResumeFields;
     return entryField;
+  } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
+  }
+};
+
+const getSkillSetList = async (): Promise<ISkillSetListFields | undefined> => {
+  try {
+    const entries = await client.getEntries<ISkillSetList>({
+      content_type: "skillSetList",
+    });
+    const entryFields = entries.items[0].fields as ISkillSetListFields;
+    console.log("entF: ", entryFields.skillSetList[0].name);
+    return entryFields;
   } catch (error) {
     if (error instanceof Error) {
       throw new Error(error.message);
@@ -57,5 +74,5 @@ const getThumbnails = async (): Promise<IThumbnailFields[] | undefined> => {
 };
 
 export const useContentful = () => {
-  return { getResume, getThumbnails, getProjects };
+  return { getResume, getThumbnails, getProjects, getSkillSetList };
 };

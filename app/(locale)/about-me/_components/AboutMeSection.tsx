@@ -1,10 +1,13 @@
+"use client";
+
 import { Title } from "@/components/common/Title";
 import { Profile } from "@/app/(locale)/about-me/_components/Profile";
-import { MySkills } from "./MySkills";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { ProfileContentsTab } from "./ProfileContentsTab";
+import { useAboutMe } from "../_hooks/useAboutMeSection";
 
 export const AboutMeSection = () => {
+  const { skillSets } = useAboutMe();
   return (
     <section
       id="aboutMe"
@@ -15,7 +18,7 @@ export const AboutMeSection = () => {
       </div>
       <div className="flex flex-col lg:gap-14">
         <Profile />
-        <ProfileContentsTab />
+        <ProfileContentsTab skillSets={skillSets} />
       </div>
       <BackgroundBeams />
     </section>

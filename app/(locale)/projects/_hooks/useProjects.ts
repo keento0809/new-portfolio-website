@@ -6,7 +6,7 @@ import {
 } from "@/@types/generated/contentful";
 
 export const useProjects = () => {
-  const { getThumbnails, getProjects } = useContentful();
+  const { getThumbnails, getProjects, getSkillSetList } = useContentful();
   const [projects, setProjects] = useState<IProjectFields[]>([]);
   const [thumbnails, setThumbnails] = useState<IThumbnailFields[]>([]);
   useEffect(() => {
@@ -16,7 +16,8 @@ export const useProjects = () => {
     getThumbnails()
       .then((res) => setThumbnails(res ?? []))
       .catch((e) => console.log(e));
-  }, [getThumbnails, getProjects]);
+    getSkillSetList();
+  }, [getThumbnails, getProjects, getSkillSetList]);
 
   return { projects, thumbnails };
 };
