@@ -3,8 +3,10 @@
 import { Title } from "@/components/common/Title";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { ProjectLayout } from "./ProjectLayout";
+import { useProjects } from "../_hooks/useProjects";
 
 export const ProjectSection = () => {
+  const { projects, thumbnails } = useProjects();
   return (
     <section
       id="projects"
@@ -14,7 +16,7 @@ export const ProjectSection = () => {
         <Title titleText="Projects" />
       </div>
       <div className="z-30 py-4">
-        <ProjectLayout />
+        <ProjectLayout projects={projects} thumbnails={thumbnails} />
       </div>
       <BackgroundBeams />
     </section>

@@ -79,7 +79,7 @@ export const ContactMeSection = () => {
             <MotionLinkButton
               buttonText="Say Hello"
               link={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL ?? ""}`}
-              delay={4}
+              delay={5}
             />
           </div>
         </div>
