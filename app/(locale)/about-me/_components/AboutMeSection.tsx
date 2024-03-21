@@ -7,7 +7,7 @@ import { ProfileContentsTab } from "./ProfileContentsTab";
 import { useAboutMe } from "../_hooks/useAboutMeSection";
 
 export const AboutMeSection = () => {
-  const { skillSets } = useAboutMe();
+  const { skillSets, descriptions } = useAboutMe();
   return (
     <section
       id="aboutMe"
@@ -17,7 +17,7 @@ export const AboutMeSection = () => {
         <Title titleText="About Me" />
       </div>
       <div className="flex flex-col lg:gap-14">
-        <Profile />
+        <Profile descriptions={descriptions} />
         <ProfileContentsTab skillSets={skillSets} />
       </div>
       <BackgroundBeams />
