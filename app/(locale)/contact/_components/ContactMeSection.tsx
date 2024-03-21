@@ -17,6 +17,7 @@ import {
   CONTACT_ME_SECOND_DESCRIPTION,
 } from "@/constants/components/section/contactMeSection";
 import Link from "next/link";
+import { useContactMeSection } from "../_hooks/useContactMeSection";
 
 const ContactMethodIcon = ({ name }: { name: string }) => {
   switch (name) {
@@ -42,6 +43,7 @@ const ContactMethodIcon = ({ name }: { name: string }) => {
 };
 
 export const ContactMeSection = () => {
+  const { resumeURL } = useContactMeSection();
   return (
     <section
       id="contact"
@@ -63,7 +65,7 @@ export const ContactMeSection = () => {
             return (
               <Link
                 key={method.name}
-                href={method.href ?? ""}
+                href={method.name === "RESUME" ? resumeURL : method.href}
                 target="_blank"
                 className="cursor-pointer hover:scale-125 transition-all ease-in-out"
               >
