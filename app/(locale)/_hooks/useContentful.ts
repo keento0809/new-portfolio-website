@@ -48,7 +48,6 @@ const getThumbnails = async (): Promise<IThumbnailFields[] | undefined> => {
         content_type: "thumbnail",
       });
     const entryFields = entries.includes?.Asset;
-    console.log("fieldsTh: ", entryFields);
     return entryFields;
   } catch (error) {
     if (error instanceof Error) {

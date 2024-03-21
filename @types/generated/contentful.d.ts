@@ -121,7 +121,7 @@ export interface IProjectFields {
     title: string;
 
     /** projectData */
-    projectData: ProjectData;
+    projectData: ProjectData[];
   };
 }
 
