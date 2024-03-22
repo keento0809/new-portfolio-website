@@ -16,12 +16,14 @@ export const Tabs = ({
   activeTabClassName,
   tabClassName,
   contentClassName,
+  skillSets,
 }: {
   tabs: Tab[];
   containerClassName?: string;
   activeTabClassName?: string;
   tabClassName?: string;
   contentClassName?: string;
+  skillSets?: Record<"name", string>[];
 }) => {
   const [active, setActive] = useState<Tab>(propTabs[0]);
   const [tabs, setTabs] = useState<Tab[]>(propTabs);

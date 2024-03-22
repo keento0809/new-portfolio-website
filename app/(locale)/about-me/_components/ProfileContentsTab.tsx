@@ -29,6 +29,10 @@ const TabWrapper = ({
   );
 };
 
+type TabContentProps<T> = {
+  array: T[];
+};
+
 export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
   skillSets,
 }) => {
@@ -39,20 +43,18 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
       content: (
         <TabWrapper title="Skills">
           <div className="mt-4 w-full flex flex-wrap gap-4 overflow-y-auto max-h-[480px]">
-            {skillSets
-              ? skillSets.map((s) => {
-                  return (
-                    <div
-                      key={s.name}
-                      className="py-2 text-white text-2xl flex items-center justify-center"
-                    >
-                      <i
-                        className={`devicon-${s.name} text-white text-2xl w-6 h-6`}
-                      ></i>
-                    </div>
-                  );
-                })
-              : null}
+            {skillSets.map((s) => {
+              return (
+                <div
+                  key={s.name}
+                  className="py-2 text-white text-2xl flex items-center justify-center"
+                >
+                  <i
+                    className={`devicon-${s.name} text-white text-2xl w-6 h-6`}
+                  ></i>
+                </div>
+              );
+            })}
           </div>
         </TabWrapper>
       ),
@@ -96,9 +98,10 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
       ),
     },
   ];
+
   return (
     <div className="h-[20rem] w-[calc(100vw-4rem)] lg:max-w-5xl z-50 md:h-[40rem] [perspective:1000px] relative b flex flex-col mx-auto items-start justify-start">
-      <Tabs tabs={tabs} />
+      <Tabs tabs={tabs} skillSets={skillSets} />
     </div>
   );
 };
