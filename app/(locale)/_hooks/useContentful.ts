@@ -1,5 +1,7 @@
 import {
   EntryCollectionIThumbnail,
+  IDescriptions,
+  IDescriptionsFields,
   IProject,
   IProjectFields,
   IResume,
@@ -16,6 +18,20 @@ export const client = createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN ?? "",
   host: process.env.NEXT_PUBLIC_CONTENTFUL_HOST,
 });
+
+const getDescriptions = async (): Promise<IDescriptionsFields | undefined> => {
+  try {
+    const entries = await client.getEntries<IDescriptions>({
+      content_type: "descriptions",
+    });
+    const entryFields = entries.items[0].fields as IDescriptionsFields;
+    return entryFields;
+  } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
+  }
+};
 
 const getResume = async (): Promise<IResumeFields | undefined> => {
   try {
@@ -35,7 +51,6 @@ const getSkillSetList = async (): Promise<ISkillSetListFields | undefined> => {
       content_type: "skillSetList",
     });
     const entryFields = entries.items[0].fields as ISkillSetListFields;
-    console.log("entF: ", entryFields.skillSetList[0].name);
     return entryFields;
   } catch (error) {
     if (error instanceof Error) {
@@ -74,5 +89,11 @@ const getThumbnails = async (): Promise<IThumbnailFields[] | undefined> => {
 };
 
 export const useContentful = () => {
-  return { getResume, getThumbnails, getProjects, getSkillSetList };
+  return {
+    getDescriptions,
+    getResume,
+    getThumbnails,
+    getProjects,
+    getSkillSetList,
+  };
 };

@@ -61,10 +61,11 @@ export interface IDescriptionsFields {
   title: Document;
 
   /** descriptions */
-  descriptions: Record<string, any>;
+  descriptions: Record<string, string>[];
 }
 
 export interface IDescriptions extends Entry<IDescriptionsFields> {
+  contentTypeId: "descriptions";
   sys: {
     id: string;
     type: string;
