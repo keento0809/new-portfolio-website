@@ -37,7 +37,7 @@ export interface IDataArrayFields {
     title: string;
 
     /** array */
-    array: Record<string, any>;
+    array: Record<"name", string>[];
   };
 }
 

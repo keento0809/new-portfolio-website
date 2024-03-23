@@ -38,25 +38,46 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
   skillSets,
   skillDataArray,
 }) => {
+  console.log("skda: ", skillDataArray);
   const tabs: Tab[] = [
     {
       title: "Skills",
       value: "skills",
       content: (
         <TabWrapper title="Skills">
-          <div className="mt-4 w-full flex flex-wrap gap-4 overflow-y-auto max-h-[480px]">
-            {skillSets.map((s) => {
-              return (
-                <div
-                  key={s.name}
-                  className="py-2 text-white text-2xl flex items-center justify-center"
-                >
-                  <i
-                    className={`devicon-${s.name} text-white text-2xl w-6 h-6`}
-                  ></i>
-                </div>
-              );
-            })}
+          <div className="flex flex-col gap-8">
+            <div className="mt-4 w-full flex flex-wrap gap-4 overflow-y-auto max-h-[480px]">
+              {skillSets.map((s) => {
+                return (
+                  <div
+                    key={s.name}
+                    className="py-2 text-white text-2xl flex items-center justify-center"
+                  >
+                    <i
+                      className={`devicon-${s.name} text-white text-2xl w-6 h-6`}
+                    ></i>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {skillDataArray.map((skillD) => {
+                return (
+                  <>
+                    {skillD.fields.array.map((s) => {
+                      return (
+                        <div
+                          key={s.name}
+                          className="py-1.5 px-3 text-sm border rounded-lg border-white"
+                        >
+                          {s.name}
+                        </div>
+                      );
+                    })}
+                  </>
+                );
+              })}
+            </div>
           </div>
         </TabWrapper>
       ),
@@ -85,13 +106,13 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
                     <span className="">{exp.place}</span>
                   </div>
                 </div>
-                <ul className="font-medium">
+                {/* <ul className="font-medium">
                   {exp.description.map((d) => (
                     <li key={d} className="py-2">
                       {d}
                     </li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
             );
           })}
