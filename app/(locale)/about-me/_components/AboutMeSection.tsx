@@ -7,7 +7,7 @@ import { ProfileContentsTab } from "./ProfileContentsTab";
 import { useAboutMe } from "../_hooks/useAboutMeSection";
 
 export const AboutMeSection = () => {
-  const { skillSets, descriptions } = useAboutMe();
+  const { skillSets, descriptions, skillDataArray } = useAboutMe();
   return (
     <section
       id="aboutMe"

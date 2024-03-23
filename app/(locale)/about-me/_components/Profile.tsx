@@ -10,7 +10,6 @@ type ProfileProps = {
 };
 
 export const Profile: FC<ProfileProps> = ({ descriptions }) => {
-  console.log("dsc: ", descriptions);
   return (
     <div className="w-full flex md:flex-row flex-col items-center justify-center md:max-w-5xl mx-auto">
       <PinContainer

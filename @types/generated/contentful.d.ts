@@ -32,14 +32,17 @@ export interface IAuthor extends Entry<IAuthorFields> {
 }
 
 export interface IDataArrayFields {
-  /** Title */
-  title: string;
+  fields: {
+    /** Title */
+    title: string;
 
-  /** array */
-  array: Record<string, any>;
+    /** array */
+    array: Record<string, any>;
+  };
 }
 
 export interface IDataArray extends Entry<IDataArrayFields> {
+  contentTypeId: "dataArray";
   sys: {
     id: string;
     type: string;

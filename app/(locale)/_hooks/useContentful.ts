@@ -1,5 +1,7 @@
 import {
   EntryCollectionIThumbnail,
+  IDataArray,
+  IDataArrayFields,
   IDescriptions,
   IDescriptionsFields,
   IProject,
@@ -88,6 +90,20 @@ const getThumbnails = async (): Promise<IThumbnailFields[] | undefined> => {
   }
 };
 
+const getDataArrays = async (): Promise<IDataArrayFields[] | undefined> => {
+  try {
+    const entries = await client.getEntries<IDataArray>({
+      content_type: "dataArray",
+    });
+    const entryFields = entries.items as IDataArrayFields[];
+    return entryFields;
+  } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
+  }
+};
+
 export const useContentful = () => {
   return {
     getDescriptions,
@@ -95,5 +111,6 @@ export const useContentful = () => {
     getThumbnails,
     getProjects,
     getSkillSetList,
+    getDataArrays,
   };
 };

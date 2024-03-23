@@ -6,9 +6,11 @@ import { MY_EDUCATION_HISTORY } from "@/constants/components/section/aboutMe/edu
 import { FC } from "react";
 import { Divider } from "@/components/common/Divider";
 import { MY_WORK_EXPERIENCE } from "@/constants/components/section/aboutMe/experience";
+import { IDataArrayFields } from "@/@types/generated/contentful";
 
 type ProfileContentsTabProps = {
   skillSets: Record<"name", string>[];
+  skillDataArray: IDataArrayFields[];
 };
 
 type Tab = {
@@ -34,6 +36,7 @@ const TabWrapper = ({
 
 export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
   skillSets,
+  skillDataArray,
 }) => {
   const tabs: Tab[] = [
     {
@@ -100,7 +103,7 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
       value: "education",
       content: (
         <TabWrapper title="Education">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-8">
             {MY_EDUCATION_HISTORY.map((e) => {
               return (
                 <div key={e.schoolName} className="flex flex-col gap-2">
@@ -109,18 +112,8 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
                     <Divider />
                     <span>{e.schoolName}</span>
                   </div>
-                  <div className="flex items-center gap-4 text-lg md:text-xl">
-                    <span className="inline-block md:min-w-[280px]">
-                      {e.majorAndDegree}
-                    </span>
-                    {e.description && (
-                      <>
-                        <Divider />
-                        <span className="text-base font-normal">
-                          {e.description}
-                        </span>
-                      </>
-                    )}
+                  <div className="text-lg md:text-xl">
+                    <span className="inline-block">{e.majorAndDegree}</span>
                   </div>
                 </div>
               );
