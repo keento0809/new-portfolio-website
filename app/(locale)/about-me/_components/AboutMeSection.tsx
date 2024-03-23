@@ -18,7 +18,10 @@ export const AboutMeSection = () => {
       </div>
       <div className="flex flex-col lg:gap-14">
         <Profile descriptions={descriptions} />
-        <ProfileContentsTab skillSets={skillSets} />
+        <ProfileContentsTab
+          skillSets={skillSets}
+          skillDataArray={skillDataArray}
+        />
       </div>
       <BackgroundBeams />
     </section>
