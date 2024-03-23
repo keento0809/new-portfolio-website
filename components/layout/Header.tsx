@@ -16,7 +16,7 @@ export const Header: FC = () => {
     <div className="absolute top-2 inset-x-0 mx-auto z-50">
       <Menu>
         <Link href={"/"}>K.H</Link>
-        <div className="text-primary-color text-xs w-full flex justify-end items-center gap-x-12 ">
+        <div className="hidden text-primary-color text-xs w-full md:flex justify-end items-center gap-x-12">
           {HEADER_MENU_ITEMS.map((menu) => (
             <Link
               key={menu.name}
