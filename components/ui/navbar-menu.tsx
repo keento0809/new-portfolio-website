@@ -13,7 +13,7 @@ export const Menu = ({ children }: { children: React.ReactNode }) => {
         ease: "easeInOut",
       }}
       viewport={{ once: true }}
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-transparent shadow-input flex items-center justify-between lg:justify-end gap-x-12 px-6 lg:px-32 py-6 "
+      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-transparent shadow-input flex items-center justify-between lg:justify-end gap-x-12 px-6 lg:px-32 py-6"
     >
       {children}
     </motion.div>
