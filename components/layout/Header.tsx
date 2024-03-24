@@ -14,7 +14,7 @@ export const Header: FC = () => {
   const { resumeURL } = useHeader();
 
   return (
-    <div className="absolute top-0 inset-x-0 mx-auto z-50">
+    <div className="absolute top-2 inset-x-0 mx-auto z-50">
       <Menu>
         <div className="">
           <Link href={"/"} className="text-sm lg:text-base text-white/80">
