@@ -7,7 +7,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
+      className="min-h-svh w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
     >
       <AuroraBackground className="">
         <motion.div
