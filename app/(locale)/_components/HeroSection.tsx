@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <AuroraBackground className="min-h-svh w-full rounded-md bg-neutral-950 relative antialiased">
+    <AuroraBackground className="min-h-svh w-full rounded-md bg-neutral-950 relative flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0.0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,9 +25,14 @@ export const HeroSection = () => {
           <div className="text-base lg:text-xl xl:text-2xl font-medium text-neutral-400">
             Web Developer based in Vancouver
           </div>
-          <button className="border-neutral-200 dark:border-neutral-500 rounded-full w-fit text-primary-color font-medium px-4 py-2 lg:px-6 lg:py-3">
-            <Link href="/projects">Explore</Link>
-          </button>
+          <div>
+            <Link
+              href="/projects"
+              className="block bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color text-base lg:text-xl cursor-pointer z-50 hover:scale-105 transition-all"
+            >
+              Explore
+            </Link>
+          </div>
         </div>
       </motion.div>
     </AuroraBackground>
