@@ -17,7 +17,7 @@ export const Header: FC = () => {
     <div className="absolute top-2 inset-x-0 mx-auto z-50">
       <Menu>
         <div className="">
-          <Link href={"/"} className="text-sm lg:text-base">
+          <Link href={"/"} className="text-sm lg:text-base text-white/80">
             K.H
           </Link>
         </div>
