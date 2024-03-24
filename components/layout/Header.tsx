@@ -7,6 +7,7 @@ import Link from "next/link";
 import { HEADER_MENU_ITEMS } from "@/constants/components/layout/header";
 import { usePathname } from "next/navigation";
 import { useHeader } from "./_hooks/useHeader";
+import { MenuIcon } from "../icons";
 
 export const Header: FC = () => {
   const pathname = usePathname();
@@ -15,8 +16,17 @@ export const Header: FC = () => {
   return (
     <div className="absolute top-2 inset-x-0 mx-auto z-50">
       <Menu>
-        <Link href={"/"}>K.H</Link>
-        <div className="text-primary-color text-xs w-full flex justify-end items-center gap-x-12 ">
+        <div className="">
+          <Link href={"/"} className="text-sm lg:text-base">
+            K.H
+          </Link>
+        </div>
+
+        <div className="text-sm">
+          <MenuIcon className="text-white/80" />
+        </div>
+
+        <div className="hidden text-primary-color text-xs w-full md:flex justify-end items-center gap-x-12">
           {HEADER_MENU_ITEMS.map((menu) => (
             <Link
               key={menu.name}

@@ -1,12 +1,7 @@
 "use client";
-import { TypewriterText } from "@/components/common/TypewriteText";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import {
-  TYPEWRITER_TEXT_FIRST_PARAGRAPH,
-  TYPEWRITER_TEXT_SECOND_PARAGRAPH,
-  TYPEWRITER_TEXT_THIRD_PARAGRAPH,
-} from "@/constants/components/section/heroSection";
-import { MotionLinkButton } from "@/app/_components/ui/MotionLinkButton";
+
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { motion } from "framer-motion";
 
 export const HeroSection = () => {
   return (
@@ -14,17 +9,31 @@ export const HeroSection = () => {
       id="hero"
       className="min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
     >
-      <div className="mx-auto lg:min-w-[600px] flex flex-col gap-8 p-2">
-        <div className="w-full">
-          <TypewriterText words={TYPEWRITER_TEXT_FIRST_PARAGRAPH} />
-          <TypewriterText words={TYPEWRITER_TEXT_SECOND_PARAGRAPH} delay={3} />
-          <TypewriterText words={TYPEWRITER_TEXT_THIRD_PARAGRAPH} delay={5} />
-        </div>
-        <div className="z-50">
-          <MotionLinkButton buttonText="Explore" link="/projects" delay={7} />
-        </div>
-      </div>
-      <BackgroundBeams />
+      <AuroraBackground className="">
+        <motion.div
+          initial={{ opacity: 0.0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          viewport={{ once: true }}
+          className="relative min-w-[100vw] flex items-center justify-center px-4 pb-6 lg:pb-4"
+        >
+          <div className="flex items-center lg:items-start flex-col gap-4 lg:gap-6">
+            <div className="text-3xl lg:text-4xl xl:text-5xl font-bold text-primary-color text-center">
+              Hi, I&apos;m <span className="text-blue-500">Kento</span>
+            </div>
+            <div className="text-base lg:text-xl xl:text-2xl font-medium text-neutral-400">
+              Web Developer based in Vancouver
+            </div>
+            <button className="border-neutral-200 dark:border-neutral-500 rounded-full w-fit text-primary-color font-medium px-4 py-2 lg:px-6 lg:py-3">
+              Explore
+            </button>
+          </div>
+        </motion.div>
+      </AuroraBackground>
     </section>
   );
 };
