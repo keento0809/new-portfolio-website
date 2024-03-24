@@ -20,9 +20,9 @@ export const AboutMeSection = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="relative w-full max-w-[100vw] flex flex-col lg:pb-4"
+        className="relative w-full max-w-[100vw] flex flex-col gap-8 lg:pb-4 px-4"
       >
-        <div className="mt-6">
+        <div>
           <Title titleText="About Me" />
         </div>
         <div className="flex flex-col w-full lg:gap-14">

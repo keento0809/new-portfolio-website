@@ -32,7 +32,7 @@ export const ProjectLayout: FC<ProjectLayoutProps> = ({
   });
   return (
     // TODO: fix height with calc later
-    <div className="h-[80vh] w-[1024px] mx-auto z-50">
+    <div className="h-[80vh] xl:w-[1024px] mx-auto z-50">
       <LayoutGrid cards={cards} />
     </div>
   );
@@ -42,9 +42,9 @@ const ProjectCard = ({ project }: { project: IProjectFields }) => {
   const projectTitle = project.fields.title;
   const { summary } = project.fields.projectData[0];
   return (
-    <div className="cursor-pointer">
-      <p className="font-bold text-4xl text-white">{projectTitle}</p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+    <div className="cursor-pointer flex flex-col gap-2 lg:gap-4">
+      <p className="font-bold text-xl lg:text-4xl text-white">{projectTitle}</p>
+      <p className="font-normal text-sm lg:text-base max-w-lg text-neutral-200">
         {summary}
       </p>
     </div>

@@ -1,24 +1,33 @@
 "use client";
 
 import { Title } from "@/components/common/Title";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { ProjectLayout } from "./ProjectLayout";
 import { useProjects } from "../_hooks/useProjects";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { motion } from "framer-motion";
 
 export const ProjectSection = () => {
   const { projects, thumbnails } = useProjects();
   return (
-    <section
-      id="projects"
-      className="pt-20 pb-32 min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
-    >
-      <div className="mt-6">
-        <Title titleText="Projects" />
-      </div>
-      <div className="z-30 py-4">
-        <ProjectLayout projects={projects} thumbnails={thumbnails} />
-      </div>
-      <BackgroundBeams />
-    </section>
+    <AuroraBackground className="min-h-svh w-full pb-48">
+      <motion.div
+        initial={{ opacity: 0.0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: true }}
+        className="relative w-full max-w-[100vw] flex flex-col gap-8 lg:pb-4 px-4"
+      >
+        <div>
+          <Title titleText="Projects" />
+        </div>
+        <div className="z-30">
+          <ProjectLayout projects={projects} thumbnails={thumbnails} />
+        </div>
+      </motion.div>
+    </AuroraBackground>
   );
 };
