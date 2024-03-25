@@ -36,7 +36,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               "relative overflow-hidden",
               selected?.id === card.id
-                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full max-w-[343px] lg:max-w-[unset] mx-auto md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col hover:bg-black/70"
+                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full max-w-[343px] lg:max-w-[unset] mx-auto md:w-1/2 m-auto flex justify-center items-center flex-wrap flex-col hover:bg-black/70 z-[80]"
                 : lastSelected?.id === card.id
                   ? "z-40 bg-white/70 rounded-xl h-full w-full"
                   : "bg-white/70 rounded-xl h-full w-full"
@@ -80,7 +80,7 @@ const BlurImage = ({ card }: { card: Card }) => {
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => {
   return (
-    <div className="bg-transparent h-full w-full rounded-lg shadow-2xl relative z-[60]">
+    <div className="bg-transparent h-full w-full rounded-lg shadow-2xl relative z-[80]">
       <motion.div
         initial={{
           opacity: 0,
