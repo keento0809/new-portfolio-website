@@ -9,7 +9,6 @@ import {
   ResumeIcon,
   PhoneIcon,
 } from "@/components/icons";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import {
   CONTACT_METHOD_ARRAY,
@@ -84,7 +83,6 @@ export const ContactMeSection = () => {
           </div>
         </div>
       </div>
-      <BackgroundBeams />
     </section>
   );
 };
