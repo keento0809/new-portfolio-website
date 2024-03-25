@@ -12,15 +12,15 @@ export const AboutMeSection = () => {
   return (
     <AuroraBackground className="min-h-svh w-full pb-48">
       <motion.div
-        initial={{ opacity: 0.0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0.0, y: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
-          delay: 0.3,
+          delay: 0.5,
           duration: 0.8,
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="relative w-full max-w-[100vw] flex flex-col gap-8 lg:pb-4 px-4"
+        className="optimized-for-animation relative w-full max-w-[100vw] flex flex-col gap-8 lg:pb-4 px-4"
       >
         <div>
           <Title titleText="About Me" />

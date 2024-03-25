@@ -6,9 +6,8 @@ export const Menu = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.div
       initial={{ opacity: 0.0, y: 0 }}
-      // whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        delay: 0.3,
+        delay: 0.5,
         duration: 0.8,
         ease: "easeIn",
       }}

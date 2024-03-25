@@ -9,10 +9,9 @@ export const HeroSection = () => {
     <AuroraBackground className="min-h-svh w-full bg-neutral-950 relative flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0.0, y: 0 }}
-        // whileInView={{ opacity: 1, y: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          delay: 0.3,
+          delay: 0.5,
           duration: 0.8,
           ease: "easeIn",
         }}
