@@ -38,3 +38,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.optimized-for-animation {
+  will-change: opacity, transform;
+}

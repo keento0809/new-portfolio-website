@@ -16,7 +16,7 @@ export const HeroSection = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="relative min-w-[100vw] flex items-center justify-center px-4 pb-6 lg:pb-4"
+        className="optimized-for-animation relative min-w-[100vw] flex items-center justify-center px-4 pb-6 lg:pb-4"
       >
         <div className="flex items-center lg:items-start flex-col gap-4 lg:gap-6">
           <div className="text-3xl lg:text-4xl xl:text-5xl font-bold text-primary-color text-center">
