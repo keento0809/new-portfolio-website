@@ -44,7 +44,7 @@ const ProjectCard = ({ project }: { project: IProjectFields }) => {
   const projectTitle = project.fields.title;
   const { summary, linkUrl, languages, gitHubUrl } =
     project.fields.projectData[0];
-  console.log("pjD: ", project.fields.projectData[0]);
+  console.log("ghURL: ", gitHubUrl);
   return (
     <>
       <div className="flex items-center justify-between">
@@ -71,7 +71,7 @@ const ProjectCard = ({ project }: { project: IProjectFields }) => {
         </div>
         <div className="self-end flex items-center gap-4">
           <Link
-            href={`${gitHubUrl}`}
+            href={`https://github.com/${gitHubUrl}`}
             className="block hover:scale-110 transition-all"
           >
             <GitHubIcon className="w-5 h-5 text-white" />

@@ -38,7 +38,6 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
   skillSets,
   skillDataArray,
 }) => {
-  console.log("skda: ", skillDataArray);
   const tabs: Tab[] = [
     {
       title: "Skills",
