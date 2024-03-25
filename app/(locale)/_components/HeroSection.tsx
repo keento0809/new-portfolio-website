@@ -12,7 +12,7 @@ export const HeroSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.3,
-          duration: 0.8,
+          duration: 0.5,
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
