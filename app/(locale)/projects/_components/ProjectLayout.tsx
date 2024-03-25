@@ -4,7 +4,9 @@ import {
   IProjectFields,
   IThumbnailFields,
 } from "@/@types/generated/contentful";
+import { GitHubIcon, LinkIcon } from "@/components/icons";
 import { LayoutGrid } from "@/components/ui/layout-grid";
+import Link from "next/link";
 import { FC } from "react";
 
 type ProjectLayoutProps = {
@@ -40,13 +42,48 @@ export const ProjectLayout: FC<ProjectLayoutProps> = ({
 
 const ProjectCard = ({ project }: { project: IProjectFields }) => {
   const projectTitle = project.fields.title;
-  const { summary } = project.fields.projectData[0];
+  const { summary, linkUrl, languages, gitHubUrl } =
+    project.fields.projectData[0];
+  console.log("pjD: ", project.fields.projectData[0]);
   return (
-    <div className="cursor-pointer flex flex-col gap-2 lg:gap-4">
-      <p className="font-bold text-xl lg:text-4xl text-white">{projectTitle}</p>
-      <p className="font-normal text-sm lg:text-base max-w-lg text-neutral-200">
-        {summary}
-      </p>
-    </div>
+    <>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          {languages.map((lang) => {
+            return (
+              <div key={lang.name} className="text-white">
+                <i
+                  className={`devicon-${lang.name}-${lang.type ? lang.type : "original"} text-white text-xl w-5 h-5`}
+                ></i>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="cursor-pointer flex flex-col gap-4">
+        <div>
+          <p className="font-bold text-xl lg:text-4xl text-white">
+            {projectTitle}
+          </p>
+          <p className="font-normal text-sm lg:text-base max-w-lg text-neutral-200">
+            {summary}
+          </p>
+        </div>
+        <div className="self-end flex items-center gap-4">
+          <Link
+            href={`${gitHubUrl}`}
+            className="block hover:scale-110 transition-all"
+          >
+            <GitHubIcon className="w-5 h-5 text-white" />
+          </Link>
+          <Link
+            href={`${linkUrl}`}
+            className="block hover:scale-110 transition-all"
+          >
+            <LinkIcon className="w-5 h-5 text-white" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
 };
