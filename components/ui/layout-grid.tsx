@@ -34,7 +34,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
             onClick={() => handleClick(card)}
             className={cn(
               card.className,
-              "relative overflow-hidden",
+              "relative overflow-hidden optimized-for-animation",
               selected?.id === card.id
                 ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full max-w-[343px] lg:max-w-[unset] mx-auto md:w-1/2 m-auto flex justify-center items-center flex-wrap flex-col hover:bg-black/70 z-[80]"
                 : lastSelected?.id === card.id
@@ -90,23 +90,9 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         }}
         className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
       />
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 100,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.3,
-          ease: "easeInOut",
-        }}
-        className="relative px-6 pt-4 pb-5 lg:px-8 z-[70] flex flex-col justify-between w-full h-full"
-      >
+      <div className="relative px-6 pt-4 pb-5 lg:px-8 z-[70] flex flex-col justify-between w-full h-full">
         {selected?.content}
-      </motion.div>
+      </div>
     </div>
   );
 };
