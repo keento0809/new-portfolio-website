@@ -3,13 +3,15 @@
 import { Title } from "@/components/common/Title";
 import { ProjectLayout } from "./ProjectLayout";
 import { useProjects } from "../_hooks/useProjects";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+// import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 
 export const ProjectSection = () => {
   const { projects, thumbnails } = useProjects();
   return (
-    <AuroraBackground>
+    <>
+      {/* <AuroraBackground>
+    </AuroraBackground> */}
       <div className="min-h-svh w-full pb-48 relative pt-6 flex flex-col gap-8 lg:pb-4 px-4">
         <motion.div
           initial={{ opacity: 0.0, y: 0 }}
@@ -25,6 +27,6 @@ export const ProjectSection = () => {
           <ProjectLayout projects={projects} thumbnails={thumbnails} />
         </div>
       </div>
-    </AuroraBackground>
+    </>
   );
 };
