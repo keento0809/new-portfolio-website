@@ -8,12 +8,13 @@ export const HeroSection = () => {
   return (
     <AuroraBackground className="min-h-svh w-full bg-neutral-950 relative flex items-center justify-center">
       <motion.div
-        initial={{ opacity: 0.0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0.0, y: 0 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
           delay: 0.3,
-          duration: 0.5,
-          ease: "easeInOut",
+          duration: 0.8,
+          ease: "easeIn",
         }}
         viewport={{ once: true }}
         className="optimized-for-animation relative min-w-[100vw] flex items-center justify-center px-4 pb-6 lg:pb-4"
