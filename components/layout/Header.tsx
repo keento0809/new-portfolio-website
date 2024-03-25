@@ -22,7 +22,7 @@ export const Header: FC = () => {
           </Link>
         </div>
 
-        <div className="text-sm">
+        <div className="text-sm md:hidden">
           <MenuIcon className="text-white/80" />
         </div>
 
