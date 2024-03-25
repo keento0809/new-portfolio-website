@@ -112,7 +112,7 @@ export interface IProfileImage extends Entry<IProfileImageFields> {
 
 export interface ProjectData {
   gitHubUrl: string;
-  languages: { name: string }[];
+  languages: { name: string; type?: string }[];
   linkUrl: string;
   points: { text: string }[];
   projectTitle: string;

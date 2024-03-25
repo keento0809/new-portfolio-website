@@ -36,14 +36,15 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               "relative overflow-hidden",
               selected?.id === card.id
-                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full max-w-[343px] lg:max-w-[unset] mx-auto md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full max-w-[343px] lg:max-w-[unset] mx-auto md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col hover:bg-black/70"
                 : lastSelected?.id === card.id
-                  ? "z-40 bg-white rounded-xl h-full w-full"
-                  : "bg-white rounded-xl h-full w-full"
+                  ? "z-40 bg-white/70 rounded-xl h-full w-full"
+                  : "bg-white/70 rounded-xl h-full w-full"
             )}
             layout
           >
             {selected?.id === card.id && <SelectedCard selected={selected} />}
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 hover:bg-opacity-50 z-20"></div>
             <BlurImage card={card} />
           </motion.div>
         </div>
@@ -69,7 +70,7 @@ const BlurImage = ({ card }: { card: Card }) => {
       width={500}
       onLoad={() => setLoaded(true)}
       className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
+        "object-cover object-top absolute inset-0 h-full w-full transition duration-200 hover:bg-black/70",
         loaded ? "blur-none" : "blur-md"
       )}
       alt="thumbnail"
@@ -79,7 +80,7 @@ const BlurImage = ({ card }: { card: Card }) => {
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => {
   return (
-    <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
+    <div className="bg-transparent h-full w-full rounded-lg shadow-2xl relative z-[60]">
       <motion.div
         initial={{
           opacity: 0,
@@ -102,7 +103,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative px-6 lg:px-8 pb-8 z-[70]"
+        className="relative px-6 pt-4 pb-5 lg:px-8 z-[70] flex flex-col justify-between w-full h-full"
       >
         {selected?.content}
       </motion.div>
