@@ -44,7 +44,6 @@ const ProjectCard = ({ project }: { project: IProjectFields }) => {
   const projectTitle = project.fields.title;
   const { summary, linkUrl, languages, gitHubUrl } =
     project.fields.projectData[0];
-  console.log("ghURL: ", gitHubUrl);
   return (
     <>
       <div className="flex items-center justify-between">
@@ -62,10 +61,10 @@ const ProjectCard = ({ project }: { project: IProjectFields }) => {
       </div>
       <div className="cursor-pointer flex flex-col gap-4">
         <div>
-          <p className="font-bold text-xl lg:text-4xl text-white">
+          <p className="font-bold text-xl lg:text-4xl text-neutral-200">
             {projectTitle}
           </p>
-          <p className="font-normal text-sm lg:text-base max-w-lg text-neutral-200">
+          <p className="font-normal text-sm lg:text-base max-w-lg text-neutral-300">
             {summary}
           </p>
         </div>
