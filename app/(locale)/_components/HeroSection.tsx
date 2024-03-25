@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <AuroraBackground className="min-h-svh w-full bg-neutral-950 relative flex items-center justify-center">
+    <AuroraBackground className="min-h-svh w-full bg-neutral-950 relative flex items-center justify-center pb-16">
       <motion.div
         initial={{ opacity: 0.0, y: 0 }}
         animate={{ opacity: 1 }}
@@ -36,9 +36,5 @@ export const HeroSection = () => {
         </div>
       </motion.div>
     </AuroraBackground>
-    // <section
-    //   className="min-h-svh w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
-    // >
-    // </section>
   );
 };

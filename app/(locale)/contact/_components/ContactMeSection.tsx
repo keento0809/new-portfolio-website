@@ -1,6 +1,5 @@
 "use client";
 
-import { MotionLinkButton } from "@/app/_components/ui/MotionLinkButton";
 import { Title } from "@/components/common/Title";
 import {
   EmailIcon,
@@ -17,14 +16,16 @@ import {
 } from "@/constants/components/section/contactMeSection";
 import Link from "next/link";
 import { useContactMeSection } from "../_hooks/useContactMeSection";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { motion } from "framer-motion";
 
 const ContactMethodIcon = ({ name }: { name: string }) => {
   switch (name) {
     case "PHONE": {
-      return <PhoneIcon />;
+      return <PhoneIcon className="text-white" />;
     }
     case "EMAIL": {
-      return <EmailIcon />;
+      return <EmailIcon className="text-white" />;
     }
     case "LINKEDIN": {
       return <LinkedInIcon />;
@@ -33,7 +34,7 @@ const ContactMethodIcon = ({ name }: { name: string }) => {
       return <GitHubIcon />;
     }
     case "RESUME": {
-      return <ResumeIcon />;
+      return <ResumeIcon className="text-white" />;
     }
     default: {
       return null;
@@ -44,45 +45,59 @@ const ContactMethodIcon = ({ name }: { name: string }) => {
 export const ContactMeSection = () => {
   const { resumeURL } = useContactMeSection();
   return (
-    <section
-      id="contact"
-      className="pt-20 min-h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-start antialiased"
-    >
-      <div className="mt-6">
-        <Title titleText="Contact" />
-      </div>
-      <div className="flex flex-col md:gap-8 lg:gap-14">
-        <div className="text-center text-base md:text-lg font-medium">
-          <TextGenerateEffect
-            className="z-50"
-            words={CONTACT_ME_FIRST_DESCRIPTION}
-          />
-          <TextGenerateEffect delay={2} words={CONTACT_ME_SECOND_DESCRIPTION} />
-        </div>
-        <div className="flex justify-center items-center md:gap-8 z-30">
-          {CONTACT_METHOD_ARRAY.map((method) => {
-            return (
-              <Link
-                key={method.name}
-                href={method.name === "RESUME" ? resumeURL : method.href}
-                target="_blank"
-                className="cursor-pointer hover:scale-125 transition-all ease-in-out"
-              >
-                <ContactMethodIcon name={method.name} />
-              </Link>
-            );
-          })}
-        </div>
-        <div className="w-full flex items-center justify-center">
-          <div className="min-w-[112px] z-50">
-            <MotionLinkButton
-              buttonText="Say Hello"
-              link={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL ?? ""}`}
-              delay={5}
-            />
+    <>
+      <AuroraBackground>
+        <motion.div
+          initial={{ opacity: 0.0, y: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 0.5,
+            duration: 0.8,
+            ease: "easeIn",
+          }}
+          viewport={{ once: true }}
+        >
+          <div className="min-h-[calc(100svh_-_74px)] w-full flex flex-col gap-12 lg:gap-8 px-4">
+            <div className="mt-6">
+              <Title titleText="Contact" />
+            </div>
+            <div className="flex flex-col gap-12 lg:gap-8">
+              <div className="flex flex-col gap-4 text-center font-medium">
+                <TextGenerateEffect
+                  className="z-50"
+                  words={CONTACT_ME_FIRST_DESCRIPTION}
+                />
+                <TextGenerateEffect
+                  delay={2}
+                  words={CONTACT_ME_SECOND_DESCRIPTION}
+                />
+              </div>
+              <div className="flex justify-center items-center gap-4 md:gap-8 z-50">
+                {CONTACT_METHOD_ARRAY.map((method) => {
+                  return (
+                    <Link
+                      key={method.name}
+                      href={method.name === "RESUME" ? resumeURL : method.href}
+                      target="_blank"
+                      className="cursor-pointer hover:scale-125 transition-all ease-in-out"
+                    >
+                      <ContactMethodIcon name={method.name} />
+                    </Link>
+                  );
+                })}
+              </div>
+              <div className="w-full flex items-center justify-center z-50">
+                <Link
+                  href={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL ?? ""}`}
+                  className="block mt-2 bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color text-base lg:text-xl cursor-pointer z-50 hover:scale-105 transition-all"
+                >
+                  Say Hello
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </AuroraBackground>
+    </>
   );
 };
