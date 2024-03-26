@@ -92,7 +92,7 @@ export const ContactMeSection = () => {
               <div className="w-full flex items-center justify-center z-50">
                 <Link
                   href={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL ?? ""}`}
-                  className="block mt-2 bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color  text-sm lg:text-base cursor-pointer z-50 hover:scale-105 transition-all"
+                  className="block mt-2 bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color text-sm 2xl:text-base cursor-pointer z-50 hover:scale-105 transition-all"
                 >
                   Say Hello
                 </Link>
