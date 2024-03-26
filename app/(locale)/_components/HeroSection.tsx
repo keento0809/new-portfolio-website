@@ -28,7 +28,7 @@ export const HeroSection = () => {
           <div>
             <Link
               href="/projects"
-              className="block mt-2 bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color text-base cursor-pointer z-50 hover:scale-105 transition-all"
+              className="block mt-2 bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color text-sm lg:text-base cursor-pointer z-50 hover:scale-105 transition-all"
             >
               Explore
             </Link>
