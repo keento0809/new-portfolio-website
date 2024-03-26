@@ -36,7 +36,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               "relative overflow-hidden optimized-for-animation",
               selected?.id === card.id
-                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full max-w-[343px] lg:max-w-[unset] mx-auto md:w-1/2 m-auto flex justify-center items-center flex-wrap flex-col hover:bg-black/70 z-[80]"
+                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full max-w-[calc(100vw_-_2rem)] max-h-[40%] lg:max-w-[450px] mx-auto md:w-1/2 m-auto flex justify-center items-center flex-wrap flex-col hover:bg-black/70 z-[80]"
                 : lastSelected?.id === card.id
                   ? "z-40 bg-white/70 rounded-xl h-full w-full"
                   : "bg-white/70 rounded-xl h-full w-full"
