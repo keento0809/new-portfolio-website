@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export const ProjectSection = () => {
   const { projects, thumbnails } = useProjects();
   return (
-    <div className="min-h-svh bg-gradient-to-br from-neutral-950 to-neutral-700 w-full relative pt-24 lg:pt-28 flex flex-col gap-8 pb-6 px-4">
+    <div className="min-h-svh bg-gradient-to-br from-neutral-950 to-neutral-700 w-full relative pt-24 lg:pt-28 flex flex-col gap-8 pb-8 px-4">
       <motion.div
         initial={{ opacity: 0.0, y: 0 }}
         animate={{ opacity: 1 }}
