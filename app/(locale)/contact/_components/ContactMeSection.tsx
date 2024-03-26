@@ -1,13 +1,7 @@
 "use client";
 
 import { Title } from "@/components/common/Title";
-import {
-  EmailIcon,
-  GitHubIcon,
-  LinkedInIcon,
-  ResumeIcon,
-  PhoneIcon,
-} from "@/components/icons";
+
 import {
   CONTACT_METHOD_ARRAY,
   CONTACT_ME_FIRST_DESCRIPTION,
@@ -17,36 +11,14 @@ import Link from "next/link";
 import { useContactMeSection } from "../_hooks/useContactMeSection";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
-
-const ContactMethodIcon = ({ name }: { name: string }) => {
-  switch (name) {
-    case "PHONE": {
-      return <PhoneIcon className="text-white" />;
-    }
-    case "EMAIL": {
-      return <EmailIcon className="text-white" />;
-    }
-    case "LINKEDIN": {
-      return <LinkedInIcon />;
-    }
-    case "GITHUB": {
-      return <GitHubIcon />;
-    }
-    case "RESUME": {
-      return <ResumeIcon className="text-white" />;
-    }
-    default: {
-      return null;
-    }
-  }
-};
+import { ContactMethodIcon } from "./ContactMethodIcon";
 
 export const ContactMeSection = () => {
   const { resumeURL } = useContactMeSection();
   return (
     <>
-      <AuroraBackground className="pt-24 lg:pt-28">
-        <div className="min-h-[calc(100svh_-_74px)] w-full flex flex-col gap-12 lg:gap-10 px-4 max-w-[375px] mx-auto lg:max-w-[420px]">
+      <AuroraBackground className="pt-24 lg:pt-28 w-full bg-neutral-950">
+        <div className="min-h-[calc(100svh_-_74px)] w-full flex flex-col gap-12 lg:gap-10 px-4 max-w-[343px] mx-auto xl:max-w-[600px] items-center justify-center pb-32">
           <motion.div
             initial={{ opacity: 0.0, y: 0 }}
             animate={{ opacity: 1 }}
@@ -71,7 +43,7 @@ export const ContactMeSection = () => {
             className=""
           >
             <div className="flex flex-col gap-12 lg:gap-10">
-              <div className="flex flex-col gap-4 text-center text-base lg:text-lg text-neutral-300 leading-snug font-medium">
+              <div className="flex flex-col gap-4 xl:gap-2 text-center text-base lg:text-lg text-neutral-300 leading-snug font-medium">
                 <p>{CONTACT_ME_FIRST_DESCRIPTION}</p>
                 <p>{CONTACT_ME_SECOND_DESCRIPTION}</p>
               </div>
