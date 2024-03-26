@@ -158,7 +158,7 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
   ];
 
   return (
-    <div className="h-[20rem] w-[calc(100vw-2rem)] lg:w-[calc(100vw-4rem)] lg:max-w-5xl z-50 md:h-[40rem] [perspective:1000px] relative b flex flex-col mx-auto items-start justify-start">
+    <div className="h-[40rem] lg:h-[20rem] w-[calc(100vw-2rem)] lg:w-[calc(100vw-4rem)] lg:max-w-5xl z-50 md:h-[40rem] [perspective:1000px] relative b flex flex-col mx-auto items-start justify-start">
       <Tabs
         tabs={tabs}
         skillSets={skillSets}

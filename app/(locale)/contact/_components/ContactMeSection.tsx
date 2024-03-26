@@ -8,7 +8,6 @@ import {
   ResumeIcon,
   PhoneIcon,
 } from "@/components/icons";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import {
   CONTACT_METHOD_ARRAY,
   CONTACT_ME_FIRST_DESCRIPTION,
@@ -47,30 +46,34 @@ export const ContactMeSection = () => {
   return (
     <>
       <AuroraBackground>
-        <motion.div
-          initial={{ opacity: 0.0, y: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            delay: 0.5,
-            duration: 0.8,
-            ease: "easeIn",
-          }}
-          viewport={{ once: true }}
-        >
-          <div className="min-h-[calc(100svh_-_74px)] w-full flex flex-col gap-12 lg:gap-8 px-4">
-            <div className="mt-6">
-              <Title titleText="Contact" />
-            </div>
+        <div className="min-h-[calc(100svh_-_74px)] w-full flex flex-col gap-12 lg:gap-8 px-4">
+          <motion.div
+            initial={{ opacity: 0.0, y: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeIn",
+            }}
+            viewport={{ once: true }}
+            className="mt-6"
+          >
+            <Title titleText="Contact" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0.0, y: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              duration: 0.8,
+              ease: "easeIn",
+            }}
+            viewport={{ once: true }}
+            className="mt-6"
+          >
             <div className="flex flex-col gap-12 lg:gap-8">
-              <div className="flex flex-col gap-4 text-center font-medium">
-                <TextGenerateEffect
-                  className="z-50"
-                  words={CONTACT_ME_FIRST_DESCRIPTION}
-                />
-                <TextGenerateEffect
-                  delay={2}
-                  words={CONTACT_ME_SECOND_DESCRIPTION}
-                />
+              <div className="flex flex-col gap-4 text-center text-lg lg:text-2xl text-neutral-300 leading-snug font-bold">
+                <p>{CONTACT_ME_FIRST_DESCRIPTION}</p>
+                <p>{CONTACT_ME_SECOND_DESCRIPTION}</p>
               </div>
               <div className="flex justify-center items-center gap-4 md:gap-8 z-50">
                 {CONTACT_METHOD_ARRAY.map((method) => {
@@ -95,8 +98,8 @@ export const ContactMeSection = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </AuroraBackground>
     </>
   );
