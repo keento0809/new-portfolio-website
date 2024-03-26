@@ -9,11 +9,11 @@ export const Footer = () => {
   return (
     <div
       className={cn(
-        "py-3 bg-gradient-to-br from-neutral-950 to-neutral-800 w-full text-xs flex flex-col items-center justify-center",
+        "py-3 bg-white text-neutral-950 w-full text-xs flex flex-col items-center justify-center",
         pathname === "/" && "bg-[#181818]"
       )}
     >
-      <p className="text-primary-color">{FOOTER_TEXT}</p>
+      <p>{FOOTER_TEXT}</p>
     </div>
   );
 };

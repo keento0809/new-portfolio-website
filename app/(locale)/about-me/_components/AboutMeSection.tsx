@@ -41,6 +41,7 @@ export const AboutMeSection = () => {
               ease: "easeInOut",
             }}
             viewport={{ once: true }}
+            className="pb-32"
           >
             <ProfileContentsTab
               skillSets={skillSets}
