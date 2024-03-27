@@ -8,10 +8,11 @@ import { HEADER_MENU_ITEMS } from "@/constants/components/layout/header";
 import { usePathname } from "next/navigation";
 import { useHeader } from "./_hooks/useHeader";
 import { MenuIcon } from "../icons";
+import { CancelIcon } from "../icons/cancelIcon";
 
 export const Header: FC = () => {
   const pathname = usePathname();
-  const { resumeURL } = useHeader();
+  const { resumeURL, isMenuOpen, openMenu, closeMenu } = useHeader();
 
   return (
     <div className="absolute top-2 inset-x-0 mx-auto z-50">
@@ -22,8 +23,15 @@ export const Header: FC = () => {
           </Link>
         </div>
 
-        <div className="text-sm md:hidden">
-          <MenuIcon className="text-white/80" />
+        <div
+          className="text-sm md:hidden transition-all"
+          onClick={!isMenuOpen ? openMenu : closeMenu}
+        >
+          {!isMenuOpen ? (
+            <MenuIcon className={cn("text-white/80")} />
+          ) : (
+            <CancelIcon className="" />
+          )}
         </div>
 
         <div className="hidden text-primary-color text-xs w-full md:flex justify-end items-center gap-x-12">

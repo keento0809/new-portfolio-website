@@ -4,6 +4,10 @@ import { useContentful } from "@/app/(locale)/_hooks/useContentful";
 export const useHeader = () => {
   const { getResume } = useContentful();
   const [resumeURL, setResumeURL] = useState("");
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const openMenu = () => setMenuOpen(true);
+  const closeMenu = () => setMenuOpen(false);
 
   useEffect(() => {
     getResume()
@@ -11,5 +15,5 @@ export const useHeader = () => {
       .catch((e) => console.log(e));
   }, [getResume]);
 
-  return { resumeURL };
+  return { resumeURL, isMenuOpen, openMenu, closeMenu };
 };
