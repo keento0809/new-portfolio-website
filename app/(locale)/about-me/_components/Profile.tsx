@@ -10,14 +10,14 @@ type ProfileProps = {
 
 export const Profile: FC<ProfileProps> = ({ descriptions }) => {
   return (
-    <div className="w-full max-w-[100vw] flex lg:flex-row flex-col items-center justify-center md:max-w-5xl gap-8 mx-auto pb-14">
-      <div className="flex-1 lg:flex-[0.8] xl:flex-[0.5] flex items-center justify-center">
-        <div className="inline-block p-3 tracking-tight text-slate-100/50 bg-black rounded-2xl cursor-none">
+    <div className="w-full max-w-[100vw] flex md:flex-row flex-col items-center justify-center md:max-w-5xl gap-8 mx-auto pb-14">
+      <div className="flex-1 flex items-center justify-center">
+        <div className="p-3 relative inline-block tracking-tight text-slate-100/50 bg-black rounded-2xl cursor-none">
           <Image
             src="/assets/myself-picture.png"
-            className="rounded-xl md:w-[200px] md:h-[200px]"
-            width={160}
-            height={160}
+            className="rounded-xl md:w-[250px] md:h-[250px]"
+            width={250}
+            height={250}
             alt="test-image"
           />
         </div>

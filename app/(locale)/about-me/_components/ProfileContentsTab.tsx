@@ -89,15 +89,15 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
               <div key={exp.companyName} className="flex flex-col gap-3">
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-sm font-semibold lg:text-xl">
+                    <h3 className="text-sm font-semibold md:text-base lg:text-xl">
                       {exp.companyName}
                     </h3>
                     <Divider />
-                    <h3 className="text-sm font-semibold lg:text-xl">
+                    <h3 className="text-sm font-semibold md:text-base lg:text-xl">
                       {exp.jobRole}
                     </h3>
                   </div>
-                  <div className="flex items-center gap-2 font-normal text-xs lg:text-sm text-neutral-100">
+                  <div className="flex items-center gap-2 font-normal text-xs md:text-sm lg:text-sm text-neutral-100">
                     <span className="">{exp.term}</span>
                     <Divider />
                     <span className="">{exp.place}</span>
@@ -118,12 +118,12 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
             {MY_EDUCATION_HISTORY.map((e, idx) => {
               return (
                 <div key={e.schoolName} className="flex flex-col gap-2">
-                  <div className="flex items-center gap-4 text-sm md:text-xl">
+                  <div className="flex items-center gap-4 text-sm md:text-base lg:text-xl">
                     <span>{e.term}</span>
-                    <Divider className={idx === 0 ? "h-16 lg:h-[14px]" : ""} />
+                    <Divider className={idx === 0 ? "h-12 md:h-[14px]" : ""} />
                     <span>{e.schoolName}</span>
                   </div>
-                  <div className="text-xs font-medium text-neutral-100 md:text-xl">
+                  <div className="text-xs font-medium text-neutral-100 md:text-sm lg:text-xl">
                     <span className="inline-block">{e.majorAndDegree}</span>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
   ];
 
   return (
-    <div className="h-[30rem] lg:h-[20rem] w-[calc(100vw-2rem)] lg:w-[calc(100vw-4rem)] lg:max-w-5xl z-50 [perspective:1000px] relative b flex flex-col mx-auto items-start justify-start">
+    <div className="h-[30rem] lg:h-[40rem] w-[calc(100vw-2rem)] lg:w-[calc(100vw-4rem)] lg:max-w-[calc(64rem_-_2rem)] xl:max-w-5xl z-50 [perspective:1000px] relative b flex flex-col mx-auto items-start justify-start">
       <Tabs tabs={tabs} skillSets={skillSets} />
     </div>
   );
