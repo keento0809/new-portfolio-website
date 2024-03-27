@@ -12,7 +12,7 @@ type MobileMenuProps = {
 
 export const MobileMenu: FC<MobileMenuProps> = ({ resumeURL, handleClick }) => {
   return (
-    <div className="fixed top-0 left-0 h-screen w-full bg-gradient-to-br from-neutral-950 to-neutral-700 lg:hidden z-50">
+    <div className="fixed top-0 left-0 h-svh w-full bg-gradient-to-br from-neutral-950 to-neutral-700 lg:hidden z-50">
       <motion.div
         initial={{ opacity: 0.0, y: 0 }}
         animate={{ opacity: 1 }}
@@ -22,7 +22,7 @@ export const MobileMenu: FC<MobileMenuProps> = ({ resumeURL, handleClick }) => {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="flex flex-col w-full h-screen items-center gap-16 justify-center pb-12"
+        className="flex flex-col w-full h-svh items-center gap-16 justify-center pb-12"
       >
         {HEADER_MENU_ITEMS.map((menu) => (
           <span
