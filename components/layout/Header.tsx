@@ -9,17 +9,23 @@ import { usePathname } from "next/navigation";
 import { useHeader } from "./_hooks/useHeader";
 import { MenuIcon } from "../icons";
 import { CancelIcon } from "../icons/cancelIcon";
-import { motion } from "framer-motion";
+import { MobileMenu } from "./_components/MobileMenu";
 
 export const Header: FC = () => {
   const pathname = usePathname();
-  const { resumeURL, isMenuOpen, openMenu, closeMenu } = useHeader();
+  const { resumeURL, isMenuOpen, openMenu, closeMenu, handleClickMenu } =
+    useHeader();
 
   return (
-    <div className="absolute top-2 inset-x-0 mx-auto z-50">
+    <div className="absolute top-0 lg:top-2 inset-x-0 mx-auto z-40">
       <Menu>
-        <div className="">
+        {isMenuOpen && (
+          <MobileMenu resumeURL={resumeURL} handleClick={handleClickMenu} />
+        )}
+
+        <div>
           <Link href={"/"} className="text-sm lg:text-base text-white/80">
+            {/* TODO: replace to logo later */}
             K.H
           </Link>
         </div>
@@ -29,42 +35,11 @@ export const Header: FC = () => {
           onClick={!isMenuOpen ? openMenu : closeMenu}
         >
           {!isMenuOpen ? (
-            <MenuIcon className={cn("text-white/80")} />
+            <MenuIcon className="text-white/80 cursor-pointer" />
           ) : (
-            <CancelIcon className="relative z-50" />
+            <CancelIcon className="relative z-[60] text-white/80 cursor-pointer" />
           )}
         </div>
-
-        {isMenuOpen && (
-          <div className="absolute top-0 left-0 w-full bg-gradient-to-br from-neutral-950 to-neutral-700 lg:hidden z-40">
-            <motion.div
-              initial={{ opacity: 0.0, y: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                delay: 0.5,
-                duration: 1,
-                ease: "easeInOut",
-              }}
-              viewport={{ once: true }}
-              className="flex flex-col w-full h-svh items-center gap-16 justify-center pb-12"
-            >
-              {HEADER_MENU_ITEMS.map((menu) => (
-                <Link
-                  key={menu.name}
-                  href={menu.name === "Resume" ? resumeURL : menu.link}
-                  className={cn(
-                    "block hover:text-blue-500 text-primary-color font-medium text-base ease-in-out transition-all"
-                  )}
-                  target={menu.target}
-                  rel="noopener noreferrer"
-                  locale={false}
-                >
-                  {menu.name}
-                </Link>
-              ))}
-            </motion.div>
-          </div>
-        )}
 
         <div className="hidden text-primary-color text-xs w-full md:flex justify-end items-center gap-x-12">
           {HEADER_MENU_ITEMS.map((menu) => (
