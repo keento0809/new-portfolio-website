@@ -16,8 +16,8 @@ export const Profile: FC<ProfileProps> = ({ descriptions }) => {
           <Image
             src="/assets/myself-picture.png"
             className="rounded-xl md:w-[250px] md:h-[250px]"
-            width={250}
-            height={250}
+            width={180}
+            height={180}
             alt="test-image"
           />
         </div>
@@ -30,7 +30,6 @@ export const Profile: FC<ProfileProps> = ({ descriptions }) => {
                   className="text-base md:text-lg font-medium text-white/80 py-3 text-wrap"
                   key={d}
                 >
-                  {/* TODO: Add subtext here */}
                   {PROFILE_SUB_TEXTS[idx].title} {d}
                 </div>
               ) : null;
