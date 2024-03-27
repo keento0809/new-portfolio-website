@@ -13,7 +13,7 @@ export const Menu = ({ children }: { children: React.ReactNode }) => {
       }}
       animate={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="optimized-for-animation relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-transparent shadow-input flex items-center justify-between lg:justify-end gap-x-12 px-6 lg:px-32 py-6 lg:max-w-5xl xl:max-w-7xl mx-auto"
+      className="optimized-for-animation w-full relative rounded-full dark:bg-black dark:border-white/[0.2] bg-transparent shadow-input flex items-center justify-between lg:justify-end gap-x-12 px-6 lg:px-32 py-6 lg:max-w-5xl xl:max-w-7xl mx-auto"
     >
       {children}
     </motion.div>

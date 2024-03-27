@@ -47,7 +47,7 @@ export const ContactMeSection = () => {
                 <p>{CONTACT_ME_FIRST_DESCRIPTION}</p>
                 <p>{CONTACT_ME_SECOND_DESCRIPTION}</p>
               </div>
-              <div className="flex justify-center items-center gap-4 lg:gap-8 z-50">
+              <div className="flex justify-center items-center gap-4 lg:gap-8 z-30">
                 {CONTACT_METHOD_ARRAY.map((method) => {
                   return (
                     <Link
@@ -61,10 +61,10 @@ export const ContactMeSection = () => {
                   );
                 })}
               </div>
-              <div className="w-full flex items-center justify-center z-50">
+              <div className="w-full flex items-center justify-center z-30">
                 <Link
                   href={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL ?? ""}`}
-                  className="block mt-2 bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color text-sm 2xl:text-base cursor-pointer z-50 hover:scale-105 transition-all"
+                  className="block mt-2 bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color text-sm 2xl:text-base cursor-pointer z-30 hover:scale-105 transition-all"
                 >
                   Say Hello
                 </Link>
