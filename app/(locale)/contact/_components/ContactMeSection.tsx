@@ -1,6 +1,7 @@
 "use client";
 
 import { Title } from "@/components/common/Title";
+import { ptSelf } from "../../ui/font";
 
 import {
   CONTACT_METHOD_ARRAY,
@@ -12,6 +13,7 @@ import { useContactMeSection } from "../_hooks/useContactMeSection";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 import { ContactMethodIcon } from "./ContactMethodIcon";
+import { cn } from "@/utils/cn";
 
 export const ContactMeSection = () => {
   const { resumeURL } = useContactMeSection();
@@ -43,7 +45,12 @@ export const ContactMeSection = () => {
             className=""
           >
             <div className="flex flex-col gap-12 lg:gap-10">
-              <div className="flex flex-col gap-4 xl:gap-2 text-center text-base lg:text-lg text-neutral-300 leading-snug font-medium">
+              <div
+                className={cn(
+                  ptSelf.className,
+                  "flex flex-col gap-4 xl:gap-2 text-center text-base lg:text-xl text-neutral-300 leading-snug font-medium"
+                )}
+              >
                 <p>{CONTACT_ME_FIRST_DESCRIPTION}</p>
                 <p>{CONTACT_ME_SECOND_DESCRIPTION}</p>
               </div>
