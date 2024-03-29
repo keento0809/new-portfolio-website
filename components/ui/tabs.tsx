@@ -16,17 +16,20 @@ export const Tabs = ({
   activeTabClassName,
   tabClassName,
   contentClassName,
-  skillSets,
 }: {
   tabs: Tab[];
   containerClassName?: string;
   activeTabClassName?: string;
   tabClassName?: string;
   contentClassName?: string;
-  skillSets?: Record<"name", string>[];
 }) => {
-  const [active, setActive] = useState<Tab>(propTabs[0]);
+  const [active, setActive] = useState<Tab | null>(null);
   const [tabs, setTabs] = useState<Tab[]>(propTabs);
+  const [first, setFirst] = useState(false);
+
+  const checkFirstClick = () => {
+    if (!first) setFirst(true);
+  };
 
   const moveSelectedTabToTop = (idx: number) => {
     const newTabs = [...propTabs];
@@ -50,6 +53,7 @@ export const Tabs = ({
           <button
             key={tab.title}
             onClick={() => {
+              checkFirstClick();
               moveSelectedTabToTop(idx);
             }}
             onMouseEnter={() => setHovering(true)}
@@ -59,10 +63,10 @@ export const Tabs = ({
               transformStyle: "preserve-3d",
             }}
           >
-            {active.value === tab.value && (
+            {active !== null && active.value === tab.value && (
               <motion.div
                 layoutId="clickedbutton"
-                transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
+                transition={{ type: "keyframes", bounce: 0.3, duration: 0.3 }}
                 className={cn(
                   "absolute inset-0 dark:bg-gray-100 bg-black border-black rounded-full",
                   activeTabClassName
@@ -73,7 +77,7 @@ export const Tabs = ({
             <span
               className={cn(
                 "relative block text-base font-medium text-primary-color",
-                active.value === tab.value && "text-blue-600"
+                active !== null && active.value === tab.value && "text-blue-600"
               )}
             >
               {tab.title}
@@ -84,9 +88,10 @@ export const Tabs = ({
       <FadeInDiv
         tabs={tabs}
         active={active}
-        key={active.value}
+        key={active !== null ? active.value : null}
         hovering={hovering}
         className={cn("mt-20 lg:mt-14", contentClassName)}
+        first={first}
       />
     </>
   );
@@ -96,18 +101,25 @@ export const FadeInDiv = ({
   className,
   tabs,
   hovering,
+  first,
 }: {
   className?: string;
-  key?: string;
+  key?: string | null;
   tabs: Tab[];
-  active: Tab;
+  active: Tab | null;
   hovering?: boolean;
+  first: boolean;
 }) => {
   const isActive = (tab: Tab) => {
     return tab.value === tabs[0].value;
   };
   return (
-    <div className="relative w-full h-full">
+    <div
+      className={cn(
+        "relative w-full mx-auto max-w-5xl h-[25rem] lg:h-[35rem] mb-20 md:mb-0",
+        !first && "hidden"
+      )}
+    >
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
