@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { FC } from "react";
 import { PROFILE_SUB_TEXTS } from "@/constants/components/section/aboutMe/profile";
+import { cn } from "@/utils/cn";
+import { ptSelf } from "../../ui/font";
 
 type ProfileProps = {
   descriptions: Record<string, string>[];
@@ -27,7 +29,10 @@ export const Profile: FC<ProfileProps> = ({ descriptions }) => {
           ? Object.values(descriptions[0]).map((d, idx) => {
               return idx < 2 ? (
                 <div
-                  className="text-base md:text-lg font-medium text-white/80 py-3 text-wrap"
+                  className={cn(
+                    ptSelf.className,
+                    "text-base md:text-xl font-medium text-white/80 py-3 text-wrap"
+                  )}
                   key={d}
                 >
                   {PROFILE_SUB_TEXTS[idx].title} {d}

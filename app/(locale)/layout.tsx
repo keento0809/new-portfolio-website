@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import { RootClient } from "./_components/RootClient";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter } from "./ui/font";
 
 export const metadata: Metadata = {
   title: "Kento Honda - New Portfolio Website",
