@@ -59,13 +59,9 @@ export const Tabs = ({
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
             className={cn("relative px-4 py-2 rounded-full", tabClassName)}
-            // style={{
-            //   transformStyle: "preserve-3d",
-            // }}
           >
             {active !== null && active.value === tab.value && (
               <motion.div
-                // layoutId="clickedbutton"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 4 }}
