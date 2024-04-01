@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <div
       className={cn(
-        "py-3 bg-neutral-300 text-neutral-950 w-full text-xs flex flex-col items-center justify-center"
+        "py-16 min-h-[unset] lg:py-12 text-primary-color w-full text-xs flex flex-col items-center justify-center font-semibold"
       )}
     >
       <p>{FOOTER_TEXT}</p>

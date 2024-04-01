@@ -35,7 +35,7 @@ export const Profile: FC<ProfileProps> = ({ descriptions }) => {
                   )}
                   key={d}
                 >
-                  {PROFILE_SUB_TEXTS[idx].title} {d}
+                  {PROFILE_SUB_TEXTS[idx]?.title ?? ""} {d}
                 </div>
               ) : null;
             })
