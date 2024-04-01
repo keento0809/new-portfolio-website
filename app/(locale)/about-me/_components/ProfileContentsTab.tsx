@@ -123,7 +123,7 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
                     <Divider className={idx === 0 ? "h-12 md:h-[14px]" : ""} />
                     <span>{e.schoolName}</span>
                   </div>
-                  <div className="text-xs font-medium text-neutral-100 md:text-sm lg:text-xl">
+                  <div className="text-xs font-normal text-neutral-100 md:text-sm">
                     <span className="inline-block">{e.majorAndDegree}</span>
                   </div>
                 </div>
@@ -138,14 +138,14 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
       value: "hobby",
       content: (
         <TabWrapper title="Hobby">
-          <div className="flex flex-col gap-6 lg:gap-4">
+          <div className="flex flex-col gap-6 lg:gap-8">
             {MY_HOBBY_CONTENTS.map((hobby) => {
               return (
                 <div className="flex flex-col gap-3" key={hobby.title}>
                   <h3 className="text-base font-semibold md:text-xl">
                     I am a {hobby.title}
                   </h3>
-                  <p className="font-normal text-sm lg:text-base">
+                  <p className="font-normal text-xs md:text-sm">
                     {hobby.description}
                   </p>
                 </div>
