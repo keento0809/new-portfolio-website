@@ -11,7 +11,7 @@ export const ContactMethodIcon = ({ name }: { name: string }) => {
     case "PHONE": {
       return <PhoneIcon className="text-white" />;
     }
-    case "EMAIL": {
+    case "DEV": {
       return <DevIcon className="text-white" />;
     }
     case "LINKEDIN": {
