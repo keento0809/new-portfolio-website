@@ -1,5 +1,6 @@
 "use client";
 
+import { LinkButton } from "@/components/common/LinkButton";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import {
   HERO_TEXT_NAME,
@@ -7,7 +8,6 @@ import {
   HERO_TEXT_TITLE_AND_LOCATION,
 } from "@/constants/components/section/heroSection";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -32,12 +32,7 @@ export const HeroSection = () => {
             {HERO_TEXT_TITLE_AND_LOCATION}
           </div>
           <div>
-            <Link
-              href="/projects"
-              className="block mt-2 bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color text-sm 2xl:text-base cursor-pointer z-50 hover:scale-105 transition-all"
-            >
-              Explore
-            </Link>
+            <LinkButton title="Explore" />
           </div>
         </div>
       </motion.div>
