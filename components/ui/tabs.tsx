@@ -74,7 +74,7 @@ export const Tabs = ({
 
             <span
               className={cn(
-                "relative block text-base font-medium text-primary-color",
+                "relative block text-base font-medium text-primary-color hover:text-blue-600 transition-all",
                 active !== null && active.value === tab.value && "text-blue-600"
               )}
             >
