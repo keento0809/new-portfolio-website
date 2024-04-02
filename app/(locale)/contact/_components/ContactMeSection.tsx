@@ -14,6 +14,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 import { ContactMethodIcon } from "./ContactMethodIcon";
 import { cn } from "@/utils/cn";
+import { LinkButton } from "@/components/common/LinkButton";
 
 export const ContactMeSection = () => {
   const { resumeURL } = useContactMeSection();
@@ -69,12 +70,7 @@ export const ContactMeSection = () => {
                 })}
               </div>
               <div className="w-full flex items-center justify-center z-30">
-                <Link
-                  href={`mailto:${process.env.NEXT_PUBLIC_MY_EMAIL ?? ""}`}
-                  className="block mt-2 bg-neutral-950 px-4 py-2 lg:px-6 lg:py-3 border-neutral-500 border rounded-full w-fit text-primary-color text-sm 2xl:text-base cursor-pointer z-30 hover:scale-105 transition-all"
-                >
-                  Say Hello
-                </Link>
+                <LinkButton title="Say Hello" />
               </div>
             </div>
           </motion.div>
