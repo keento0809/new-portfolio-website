@@ -1,9 +1,9 @@
 import {
-  EmailIcon,
   GitHubIcon,
   LinkedInIcon,
   ResumeIcon,
   PhoneIcon,
+  DevIcon,
 } from "@/components/icons";
 
 export const ContactMethodIcon = ({ name }: { name: string }) => {
@@ -11,8 +11,8 @@ export const ContactMethodIcon = ({ name }: { name: string }) => {
     case "PHONE": {
       return <PhoneIcon className="text-white" />;
     }
-    case "EMAIL": {
-      return <EmailIcon className="text-white" />;
+    case "DEV": {
+      return <DevIcon className="text-white" />;
     }
     case "LINKEDIN": {
       return <LinkedInIcon />;

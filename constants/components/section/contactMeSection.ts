@@ -15,8 +15,8 @@ const CONTACT_METHOD_ARRAY: ContactMethod[] = [
     name: "PHONE",
   },
   {
-    href: process.env.NEXT_PUBLIC_MY_EMAIL ?? "",
-    name: "EMAIL",
+    href: process.env.NEXT_PUBLIC_MY_DEV ?? "",
+    name: "DEV",
   },
   {
     href: process.env.NEXT_PUBLIC_MY_LINKEDIN ?? "",
