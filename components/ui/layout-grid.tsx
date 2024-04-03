@@ -89,7 +89,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         }}
         className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
       />
-      <div className="relative px-6 pt-4 pb-5 lg:px-8 z-[70] flex flex-col justify-between w-full h-full">
+      <div className="relative px-6 pt-4 pb-5 z-[70] flex flex-col justify-between w-full h-full">
         {selected?.content}
       </div>
     </div>
