@@ -33,7 +33,6 @@ export const ProjectLayout: FC<ProjectLayoutProps> = ({
     };
   });
   return (
-    // TODO: fix height with calc later
     <div className="h-[80vh] xl:w-[1024px] mx-auto z-50">
       <LayoutGrid cards={cards} />
     </div>
