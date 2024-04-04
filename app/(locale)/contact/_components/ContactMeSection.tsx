@@ -7,7 +7,7 @@ import {
   CONTACT_METHOD_ARRAY,
   CONTACT_ME_FIRST_DESCRIPTION,
   CONTACT_ME_SECOND_DESCRIPTION,
-} from "@/constants/components/section/contactMeSection";
+} from "@/constants/components/section/contact/contactMeSection";
 import Link from "next/link";
 import { useContactMeSection } from "../_hooks/useContactMeSection";
 import { AuroraBackground } from "@/components/ui/aurora-background";
