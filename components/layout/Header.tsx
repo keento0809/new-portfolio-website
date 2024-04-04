@@ -32,7 +32,7 @@ export const Header: FC = () => {
               alt="logo"
               width={60}
               height={60}
-              className="inline md:w-[80px] md:h-[80px]"
+              className="inline"
             />
           </Link>
         </div>
