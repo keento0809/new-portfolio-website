@@ -10,6 +10,7 @@ import { useHeader } from "./_hooks/useHeader";
 import { MenuIcon } from "../icons";
 import { CancelIcon } from "../icons/cancelIcon";
 import { MobileMenu } from "./_components/MobileMenu";
+import Image from "next/image";
 
 export const Header: FC = () => {
   const pathname = usePathname();
@@ -26,7 +27,13 @@ export const Header: FC = () => {
         <div>
           <Link href={"/"} className="text-sm lg:text-base text-white/80">
             {/* TODO: replace to logo later */}
-            K.H
+            <Image
+              src="/assets/header-logo.png"
+              alt="logo"
+              width={60}
+              height={60}
+              className="inline md:w-[80px] md:h-[80px]"
+            />
           </Link>
         </div>
 
