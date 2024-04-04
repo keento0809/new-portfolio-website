@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     default: "Kento Honda - New Portfolio Website",
     template: "%s | Kento Honda - New Portfolio Website",
   },
+  icons: "favicon.ico",
   description:
     "This is Kento Honda's new portfolio website. Please check it out!",
 };
