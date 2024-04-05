@@ -25,44 +25,60 @@ Access this project at [Portfolio website](https://new-portfolio-website-beta.ve
 
 Here is the summary of featured projects on my portfolio website. Please take a look and if you get more interest in my projects, you can check the GitHub link for each project on my portfolio website and see how I've done in developing them.
 
+[VanTechEventFinder](https://vantecheventfinder.netlify.app/)
+
+- Integrated with Meetup API and GraphQL to optimize data fetching
+- Applied Next-Auth with tRPC to secure the type safe in the authentication process
+- Customized styles of Google Map and components used in it to enhance user experience
+
+- Tools: `Next.js` `TypeScript` `TailwindCSS` `PostgreSQL` `Next-Auth` `tRPC` `GraphQL`
+
+[Gathering](https://gathering-two.vercel.app/)
+
+- Full-stack application with Typescript, NextJS, and MongoDB to create and join events
+- Making use of emailJS to add the feature of sending confirmation mails to users
+- Deal with Data by MongoDB dynamically to enable admin users to manage gatherings
+
+- Tools: `Next.js` `TypeScript` `TailwindCSS` `MongoDB`
+
 [ShoppingList Mern App](https://shopping-list-mern-app.vercel.app/)
 
 - MERN-stack application memorizing shopping items with MongoDB, Express, React, and NodeJS.
 - Showcasing my skills such as developing a full-stack application with a good understanding of bcrypt and JWT, connecting MongoDB to React App, and styling with Chakra UI.
 
-- Tools: `ReactJS` `NodeJS` `Express` `MongoDB` `ChakraUI` `bcrypt` `JWT`
+- Tools: `React.js` `Node.js` `Express` `MongoDB` `ChakraUI` `bcrypt` `JWT`
 
 [StudyLog](https://studylog-three.vercel.app/)
 
 - Helpful web application that analyzes and visualizes users’ daily study records.
 - Utilized Ant Design Chart to visualize data with line charts and manipulated users’ data with firebase.
 
-- Tools: `Typescript` `ReactJS` `Firebase` `TailwindCSS` `Ant Design Chart`
+- Tools: `React.js` `Typescript` `Firebase` `TailwindCSS` `Ant Design Chart`
 
 [CountryBeen](https://country-been.vercel.app/)
 
 - Useful web application for remembering countries where users have been before.
 - Applied Redux toolkit for state management with Typescript, and a React library (react-simple-map).
 
-- Tools: `Typescript` `ReactJS` `Redux` `Firebase` `TailwindCSS` `DaisyUI`
+- Tools: `React.js` `Typescript` `Redux` `Firebase` `TailwindCSS` `DaisyUI`
 
 [FreshMarche](https://freshmarche.vercel.app/home)
 
 - E-commerce-like application specializing in fruits and vegetables created with ReactJS and MaterialUI.
 - Implemented CRUD operations with React-Router, applied Stripe API for the checkout section.
 
-- Tools: `ReactJS` `Firebase` `MaterialUI` `Stripe API`
+- Tools: `React.js` `Firebase` `MaterialUI` `Stripe API`
 
 [Doctor Appointment](https://easydoctorappointment.netlify.app/home)
 
 - Group project in school - Practical application for booking doctor appointments.
 - Completed connecting React App to MongoDB, as well as utilizing firebase for user authentication.
 
-- Tools: `ReactJS` `Redux` `MongoDB` `Firebase` `Styled-components`
+- Tools: `React.js` `Redux` `MongoDB` `Firebase` `Styled-components`
 
 ## Screenshots
 
-![Portfolio website](https://github.com/keento0809/new-portfolio-website/assets/65790344/0243a1db-f98d-4e50-8e00-b677f442e482)
+![Portfolio website](https://github.com/keento0809/new-portfolio-website/assets/65790344/d6d63589-6d20-4924-908c-aa1499904238)
 
 ## Technologies
 
