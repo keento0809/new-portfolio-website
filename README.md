@@ -1,8 +1,8 @@
-# KENTO's Portfolio website
+# KENTO's New Portfolio website
 
-This is my portfolio website, a simple but user-friendly and great UI design created with React.js and styled-components.
+This is my portfolio website, stylish and user-friendly design created with Next.js, TypeScript, TailwindCSS, and Contentful that is a Headless CMS.
 
-Everyone can check all of my projects created with various programming languages and tools on the portfolio website. And the order of projects is based on how featured the project is. Since my specialties of tech skills are Javascript, React.js, and Redux, I showcase my projects utilizing them a lot to highlight my skills.
+Everyone can check all of my projects created with various tech stacks on my portfolio website. As my specialties are Next.js, React.js, and TypeScript, I showcase my projects utilizing them a lot to highlight my skills.
 
 ## Demo link:
 
@@ -62,27 +62,28 @@ Here is the summary of featured projects on my portfolio website. Please take a 
 
 ## Screenshots
 
-![Portfolio website](https://user-images.githubusercontent.com/65790344/184456159-217a2d0f-a852-49ad-a994-b73a358792cf.png)
+![Portfolio website](https://github.com/keento0809/new-portfolio-website/assets/65790344/0243a1db-f98d-4e50-8e00-b677f442e482)
 
 ## Technologies
 
-- `React` - version 18.0.0
-- `Styled-components` - version 5.3.5
+- `Next.js` - version 14.1.3
+- `typescript` - version 5.0.0
+- `tailwindcss` - version 3.4.1
 
 ## Setup
 
 - Download or clone the repository
 - Run `npm install`
-- Run `npm start` to start running the app
+- Run `npm run dev` to start running the app
 
 ## Approach
 
-- Optimize React components as much as possible to minimize workloads
-- Styled by styled-components, showcasing my CSS skills and not relying on CSS framework in terms of the design.
+- Interacted with `Contentful`, a Headless CMS to fetch static data and to display them
+- Styled with [AceternityUI](https://ui.aceternity.com/), a component library built by `tailwindcss` to enhance the UI of my portfolio website
 
 ## Status
 
-[Portfolio website](https://portfolio-website-zeta-five.vercel.app/) is still in progress adding new projects, so I always keep my portfolio website up-to-date to showcase my progress in web development and memorize how far I could grow as a web developer.
+[Portfolio website](https://new-portfolio-website-beta.vercel.app/) is still in progress adding new projects, so I always keep my portfolio website up-to-date to showcase my progress in web development and memorize how far I could grow as a web developer.
 
 ## Credits
 
