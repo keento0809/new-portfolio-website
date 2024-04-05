@@ -37,7 +37,7 @@ export const ProjectSection = () => {
         <div
           className={cn(
             ptSelf.className,
-            "pb-8 text-center text-sm lg:text-base whitespace-pre-wrap"
+            "pb-8 text-center text-white/80 text-sm lg:text-base whitespace-pre-wrap"
           )}
         >
           {PROJECT_DESCRIPTION}
