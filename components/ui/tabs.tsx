@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { DownArrowIcon } from "../icons";
 
 type Tab = {
   title: string;
@@ -79,6 +80,20 @@ export const Tabs = ({
               )}
             >
               {tab.title}
+              {idx === 0 && !first && (
+                <motion.div
+                  animate={{ y: 10 }}
+                  transition={{
+                    type: "spring",
+                    bounce: 0.2,
+                    repeat: Infinity,
+                  }}
+                  className="absolute -top-[4.5rem] left-1 text-white/80"
+                >
+                  <span className="block text-[10px] text-white/80">Click</span>
+                  <DownArrowIcon />
+                </motion.div>
+              )}
             </span>
           </button>
         ))}
