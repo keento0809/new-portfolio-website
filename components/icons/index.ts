@@ -6,3 +6,4 @@ export { PhoneIcon } from "./PhoneIcon";
 export { MenuIcon } from "./MenuIcon";
 export { LinkIcon } from "./LinkIcon";
 export { DevIcon } from "./DevIcon";
+export { DownArrowIcon } from "./DownArrowIcon";
