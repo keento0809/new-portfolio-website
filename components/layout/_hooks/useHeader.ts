@@ -15,7 +15,7 @@ export const useHeader = () => {
     router.push(link);
     setTimeout(() => {
       closeMenu();
-    }, 500);
+    }, 900);
   };
 
   useEffect(() => {

@@ -26,7 +26,6 @@ export const Header: FC = () => {
 
         <div>
           <Link href={"/"} className="text-sm lg:text-base text-white/80">
-            {/* TODO: replace to logo later */}
             <Image
               src="/assets/header-logo.png"
               alt="logo"
