@@ -1,12 +1,12 @@
 "use client";
 
-import { Tabs } from "@/components/ui/tabs";
 import { MY_HOBBY_CONTENTS } from "@/app/(locale)/about-me/_constants/myHobby";
-import { MY_EDUCATION_HISTORY } from "@/constants/components/section/aboutMe/education";
 import { FC } from "react";
-import { Divider } from "@/components/common/Divider";
 import { MY_WORK_EXPERIENCE } from "@/app/(locale)/about-me/_constants/experience";
 import { IDataArrayFields } from "@/@types/generated/contentful";
+import { MY_EDUCATION_HISTORY } from "../_constants/education";
+import { Divider } from "@/components/common/divider/Divider";
+import { Tabs } from "@/components/ui/aceturnityUI/tabs/tabs";
 
 type ProfileContentsTabProps = {
   skillSets: Record<"name", string>[];

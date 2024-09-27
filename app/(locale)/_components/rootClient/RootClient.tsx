@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { RootHandle } from "./RootHandle";
+import { RootHandle } from "./_components/rootHandle/RootHandle";
 
 type RootClientProps = {
   children: React.ReactNode;

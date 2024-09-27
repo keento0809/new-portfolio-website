@@ -1,9 +1,9 @@
 "use client";
 
-import { HEADER_MENU_ITEMS } from "@/constants/components/layout/header";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import { FC } from "react";
+import { HEADER_MENU_ITEMS } from "../_constants/header";
 
 type MobileMenuProps = {
   handleClick: (link: string) => void;

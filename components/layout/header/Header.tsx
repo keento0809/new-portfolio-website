@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import { Menu } from "../../ui/navbar-menu";
+import { Menu } from "../../ui/aceturnityUI/navbarMenu/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
