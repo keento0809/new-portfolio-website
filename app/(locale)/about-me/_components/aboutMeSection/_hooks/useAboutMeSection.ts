@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useContentful } from "../../_hooks/useContentful";
+import { useContentful } from "../../../../_hooks/useContentful";
 import { IDataArrayFields } from "@/@types/generated/contentful";
 
 export const useAboutMe = () => {

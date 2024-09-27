@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FC } from "react";
 import { PROFILE_SUB_TEXTS } from "@/constants/components/section/aboutMe/profile";
 import { cn } from "@/utils/cn";
-import { ptSelf } from "../../ui/font";
+import { ptSelf } from "../../_ui/font";
 
 type ProfileProps = {
   descriptions: Record<string, string>[];

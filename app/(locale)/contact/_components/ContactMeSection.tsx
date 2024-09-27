@@ -1,7 +1,7 @@
 "use client";
 
 import { Title } from "@/components/common/Title";
-import { ptSelf } from "../../ui/font";
+import { ptSelf } from "../../_ui/font";
 
 import {
   CONTACT_METHOD_ARRAY,

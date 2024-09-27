@@ -1,9 +1,9 @@
 "use client";
 
 import { Title } from "@/components/common/Title";
-import { ProfileContentsTab } from "./ProfileContentsTab";
-import { useAboutMe } from "../_hooks/useAboutMeSection";
-import { Profile } from "./Profile";
+import { ProfileContentsTab } from "../ProfileContentsTab";
+import { useAboutMe } from "./_hooks/useAboutMeSection";
+import { Profile } from "../Profile";
 import { motion } from "framer-motion";
 
 export const AboutMeSection = () => {

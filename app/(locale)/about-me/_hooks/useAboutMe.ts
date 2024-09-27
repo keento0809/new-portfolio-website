@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useContentful } from "../useContentful";
+import { useContentful } from "../../_hooks/useContentful";
 
 export const useAboutMe = () => {
   const { getResume } = useContentful();

@@ -5,7 +5,7 @@ import { ProjectLayout } from "./ProjectLayout";
 import { useProjects } from "../_hooks/useProjects";
 import { motion } from "framer-motion";
 import { PROJECT_DESCRIPTION } from "@/constants/components/section/projects/projectSection";
-import { ptSelf } from "../../ui/font";
+import { ptSelf } from "../../_ui/font";
 import { cn } from "@/utils/cn";
 
 export const ProjectSection = () => {
