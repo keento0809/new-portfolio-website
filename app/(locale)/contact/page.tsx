@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ContactMeSection } from "./_components/ContactMeSection";
+import { ContactMeSection } from "./_components/contactMeSection/ContactMeSection";
 
 export const metadata: Metadata = {
   title: "Contact",

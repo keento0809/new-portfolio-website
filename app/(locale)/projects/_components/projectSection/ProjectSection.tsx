@@ -1,12 +1,12 @@
 "use client";
 
 import { Title } from "@/components/common/Title";
-import { ProjectLayout } from "./ProjectLayout";
-import { useProjects } from "../_hooks/useProjects";
+import { ProjectLayout } from "../projectLayout/ProjectLayout";
+import { useProjects } from "../../_hooks/useProjects";
 import { motion } from "framer-motion";
-import { PROJECT_DESCRIPTION } from "@/constants/components/section/projects/projectSection";
-import { ptSelf } from "../../_ui/font";
+import { ptSelf } from "../../../_ui/font";
 import { cn } from "@/utils/cn";
+import { PROJECT_DESCRIPTION } from "./_constants/projectSection";
 
 export const ProjectSection = () => {
   const { projects, thumbnails } = useProjects();

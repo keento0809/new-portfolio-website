@@ -2,12 +2,12 @@
 
 import { LinkButton } from "@/components/common/LinkButton";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { motion } from "framer-motion";
 import {
   HERO_TEXT_NAME,
   HERO_TEXT_START,
   HERO_TEXT_TITLE_AND_LOCATION,
-} from "@/constants/components/section/heroSection";
-import { motion } from "framer-motion";
+} from "./_constants/heroSection";
 
 export const HeroSection = () => {
   return (

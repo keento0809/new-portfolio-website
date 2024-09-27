@@ -4,13 +4,13 @@ import { FC } from "react";
 import { Menu } from "../../ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-import { HEADER_MENU_ITEMS } from "@/constants/components/layout/header";
 import { usePathname } from "next/navigation";
 import { useHeader } from "./_hooks/useHeader";
 import { MenuIcon } from "../../icons";
 import { CancelIcon } from "../../icons/cancelIcon";
 import { MobileMenu } from "./_components/MobileMenu";
 import Image from "next/image";
+import { HEADER_MENU_ITEMS } from "./_constants/header";
 
 export const Header: FC = () => {
   const pathname = usePathname();

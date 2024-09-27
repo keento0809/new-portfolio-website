@@ -1,7 +1,7 @@
 "use client";
 
-import { FOOTER_TEXT } from "@/constants/components/layout/footer";
 import { cn } from "@/utils/cn";
+import { FOOTER_TEXT } from "./_constants/footer";
 
 export const Footer = () => {
   return (
