@@ -11,19 +11,21 @@ type Tab = {
   content?: string | React.ReactNode | any;
 };
 
+type TabsProps = {
+  tabs: Tab[];
+  containerClassName?: string;
+  activeTabClassName?: string;
+  tabClassName?: string;
+  contentClassName?: string;
+};
+
 export const Tabs = ({
   tabs: propTabs,
   containerClassName,
   activeTabClassName,
   tabClassName,
   contentClassName,
-}: {
-  tabs: Tab[];
-  containerClassName?: string;
-  activeTabClassName?: string;
-  tabClassName?: string;
-  contentClassName?: string;
-}) => {
+}: TabsProps) => {
   const [active, setActive] = useState<Tab | null>(null);
   const [tabs, setTabs] = useState<Tab[]>(propTabs);
   const [first, setFirst] = useState(false);
@@ -89,9 +91,11 @@ export const Tabs = ({
                     bounce: 0.2,
                     repeat: Infinity,
                   }}
-                  className="absolute -top-[4.5rem] left-1 text-white/80"
+                  className="absolute -top-[4.5rem] left-1 text-blue-600 font-semibold"
                 >
-                  <span className="block text-[10px] text-white/80">Click</span>
+                  <span className="block text-[10px] text-blue-600 text-center font-semibold">
+                    Click
+                  </span>
                   <DownArrowIcon />
                 </motion.div>
               )}
