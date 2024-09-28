@@ -5,7 +5,7 @@ import {
   IThumbnailFields,
 } from "@/@types/generated/contentful";
 import { GitHubIcon, LinkIcon } from "@/components/icons";
-import { LayoutGrid } from "@/components/ui/layout-grid";
+import { LayoutGrid } from "@/components/ui/aceturnityUI/layoutGrid/layout-grid";
 import Link from "next/link";
 import { FC } from "react";
 
