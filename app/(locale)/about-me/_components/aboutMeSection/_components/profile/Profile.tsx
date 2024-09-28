@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { FC } from "react";
 import { PROFILE_SUB_TEXTS } from "@/app/(locale)/about-me/_constants/profile";
