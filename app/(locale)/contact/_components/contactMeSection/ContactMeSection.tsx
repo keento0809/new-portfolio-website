@@ -5,7 +5,7 @@ import { ptSelf } from "../../../_ui/font";
 import Link from "next/link";
 import { useContactMeSection } from "../../_hooks/useContactMeSection";
 import { motion } from "framer-motion";
-import { ContactMethodIcon } from "../ContactMethodIcon";
+import { ContactMethodIcon } from "./_components/contactMethodIcon/ContactMethodIcon";
 import { cn } from "@/utils/cn";
 import {
   CONTACT_ME_FIRST_DESCRIPTION,

@@ -1,10 +1,10 @@
 "use client";
 
-import { Title } from "@/components/common/Title";
-import { ProfileContentsTab } from "../ProfileContentsTab";
+import { ProfileContentsTab } from "./_components/profileContentsTab/ProfileContentsTab";
 import { useAboutMe } from "./_hooks/useAboutMeSection";
-import { Profile } from "../Profile";
+import { Profile } from "./_components/profile/Profile";
 import { motion } from "framer-motion";
+import { Title } from "@/components/common/title/Title";
 
 export const AboutMeSection = () => {
   const { skillSets, descriptions, skillDataArray } = useAboutMe();
