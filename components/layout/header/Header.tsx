@@ -31,7 +31,7 @@ export const Header: FC = () => {
               alt="logo"
               width={60}
               height={60}
-              className="inline"
+              className="inline aspect-auto"
             />
           </Link>
         </div>

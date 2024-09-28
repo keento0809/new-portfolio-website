@@ -17,13 +17,12 @@ type Tab = {
   content: JSX.Element;
 };
 
-const TabWrapper = ({
-  children,
-  title,
-}: {
+type TabWrapperProps = {
   children: React.ReactNode;
   title: String;
-}) => {
+};
+
+const TabWrapper = ({ children, title }: TabWrapperProps) => {
   return (
     <div className="w-full flex flex-col gap-8 overflow-hidden relative h-full rounded-2xl p-8 lg:p-10 font-bold text-white bg-gradient-to-br from-blue-600 to-blue-900 overflow-y-auto">
       <h2 className="text-lg md:text-2xl">{title}</h2>
@@ -56,9 +55,9 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
               })}
             </div>
             <div className="hidden lg:flex flex-wrap gap-2">
-              {skillDataArray.map((skillD) => {
+              {skillDataArray.map((skillD, idx) => {
                 return (
-                  <>
+                  <div key={idx}>
                     {skillD.fields.array.map((s) => {
                       return (
                         <div
@@ -69,7 +68,7 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
                         </div>
                       );
                     })}
-                  </>
+                  </div>
                 );
               })}
             </div>

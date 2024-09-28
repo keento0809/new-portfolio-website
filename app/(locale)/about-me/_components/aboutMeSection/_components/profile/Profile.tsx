@@ -15,7 +15,7 @@ export const Profile: FC<ProfileProps> = ({ descriptions }) => {
         <div className="p-3 relative inline-block tracking-tight text-slate-100/50 bg-black rounded-2xl cursor-none">
           <Image
             src="/assets/myself-picture.png"
-            className="rounded-xl md:w-[250px] md:h-[250px]"
+            className="rounded-xl md:w-[250px] md:h-[250px] aspect-square"
             width={180}
             height={180}
             alt="test-image"
