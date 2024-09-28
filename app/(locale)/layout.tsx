@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import { RootClient } from "./_components/RootClient";
-import { inter } from "./ui/font";
+import { RootClient } from "./_components/rootClient/RootClient";
+import { inter } from "./_ui/font";
 
 export const metadata: Metadata = {
   title: {
