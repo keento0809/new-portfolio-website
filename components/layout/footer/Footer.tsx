@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/utils/cn";
 import { FOOTER_TEXT } from "./_constants/footer";
 

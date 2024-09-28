@@ -1,5 +1,3 @@
-"use client";
-
 import { MY_HOBBY_CONTENTS } from "@/app/(locale)/about-me/_constants/myHobby";
 import { FC } from "react";
 import { MY_WORK_EXPERIENCE } from "@/app/(locale)/about-me/_constants/experience";
