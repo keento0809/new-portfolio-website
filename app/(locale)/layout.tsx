@@ -19,9 +19,14 @@ export const metadata: Metadata = {
       "This is Kento Honda's new portfolio website. Please check it out!",
     url: siteUrl,
     siteName: "Kento Honda's portfolio website",
-    images: [],
+    images: [`${siteUrl}/assets/common/og-image.png`],
     locale: "en-US",
     type: "website",
+  },
+  twitter: {
+    title: "Kento Honda's portfolio website",
+    card: "summary_large_image",
+    images: [`${siteUrl}/assets/common/og-image.png`],
   },
 };
 
