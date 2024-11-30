@@ -33,6 +33,7 @@ export const ProjectLayout: FC<ProjectLayoutProps> = ({
       thumbnail: thumbnailURL,
     };
   });
+
   return (
     <div className="h-[80vh] xl:w-[1024px] mx-auto z-50">
       <LayoutGrid cards={cards} />

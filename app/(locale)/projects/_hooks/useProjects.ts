@@ -9,6 +9,7 @@ export const useProjects = () => {
   const { getThumbnails, getProjects, getSkillSetList } = useContentful();
   const [projects, setProjects] = useState<IProjectFields[]>([]);
   const [thumbnails, setThumbnails] = useState<IThumbnailFields[]>([]);
+
   useEffect(() => {
     getProjects()
       .then((res) => setProjects(res ?? []))
