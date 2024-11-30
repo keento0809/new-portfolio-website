@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     locale: "en-US",
     type: "website",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   twitter: {
     title: "Kento Honda's portfolio website",
     card: "summary_large_image",
