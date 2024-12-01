@@ -36,11 +36,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  const supportedLocales = ["en", "ja", "fr"];
+  const currentLocale = supportedLocales.includes(locale) ? locale : "en";
+
   return (
-    <html className="scroll-smooth" lang="en">
+    <html className="scroll-smooth" lang={currentLocale}>
       <body className={inter.className}>
         <RootClient>{children}</RootClient>
       </body>
