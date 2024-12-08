@@ -9,10 +9,18 @@ type MyWorkExperience = {
 
 const MY_WORK_EXPERIENCE: MyWorkExperience[] = [
   {
+    companyName: "H&Company",
+    jobRole: "Front-End Developer",
+    term: "Jun, 2024 - Present",
+    place: "Tokyo, Japan - Hybrid",
+    techStack: ["Next.js", "TypeScript", "GraphQL", "Nest.js", "docker", "AWS"],
+    description: [],
+  },
+  {
     companyName: "80&Company",
     jobRole: "Front-End Developer",
-    term: "July, 2023 - Present",
-    place: "Kyoto, Japan",
+    term: "July, 2023 - April, 2024",
+    place: "Kyoto, Japan - Remote",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -33,7 +41,7 @@ const MY_WORK_EXPERIENCE: MyWorkExperience[] = [
     companyName: "BuildN",
     jobRole: "Front-End Developer",
     term: "September, 2022 - June, 2023",
-    place: "Vancouver, BC",
+    place: "Vancouver, BC - Remote",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -55,7 +63,7 @@ const MY_WORK_EXPERIENCE: MyWorkExperience[] = [
     companyName: "Bajji. inc",
     jobRole: "Front-End Developer",
     term: "April, 2023 - June, 2023",
-    place: "Tokyo, Japan",
+    place: "Tokyo, Japan - Remote",
     techStack: [
       "Next.js",
       "TypeScript",
