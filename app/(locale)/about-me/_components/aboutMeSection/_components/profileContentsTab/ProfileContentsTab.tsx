@@ -1,5 +1,5 @@
 import { MY_HOBBY_CONTENTS } from "@/app/(locale)/about-me/_constants/myHobby";
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import { MY_WORK_EXPERIENCE } from "@/app/(locale)/about-me/_constants/experience";
 import { IDataArrayFields } from "@/@types/generated/contentful";
 import { MY_EDUCATION_HISTORY } from "../../../../_constants/education";
@@ -55,9 +55,9 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
               })}
             </div>
             <div className="hidden lg:flex flex-wrap gap-2">
-              {skillDataArray.map((skillD, idx) => {
+              {skillDataArray.flatMap((skillD, idx) => {
                 return (
-                  <div key={idx}>
+                  <Fragment key={idx}>
                     {skillD.fields.array.map((s) => {
                       return (
                         <div
@@ -68,7 +68,7 @@ export const ProfileContentsTab: FC<ProfileContentsTabProps> = ({
                         </div>
                       );
                     })}
-                  </div>
+                  </Fragment>
                 );
               })}
             </div>
