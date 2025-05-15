@@ -11,7 +11,7 @@ const MY_WORK_EXPERIENCE: MyWorkExperience[] = [
   {
     companyName: "H&Company",
     jobRole: "Front-End Developer",
-    term: "Jun, 2024 - Present",
+    term: "Jun, 2024 - April, 2025",
     place: "Tokyo, Japan - Hybrid",
     techStack: ["Next.js", "TypeScript", "GraphQL", "Nest.js", "docker", "AWS"],
     description: [],
