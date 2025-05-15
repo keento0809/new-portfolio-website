@@ -63,17 +63,29 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 const BlurImage = ({ card }: { card: Card }) => {
   const [loaded, setLoaded] = useState(false);
   return (
-    <Image
-      src={card.thumbnail ?? ""}
-      height={500}
-      width={500}
-      onLoad={() => setLoaded(true)}
-      className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200 hover:bg-black/70",
-        loaded ? "blur-none" : "blur-md"
+    <div className="">
+      {!loaded && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div
+            className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full"
+            role="status"
+          >
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
       )}
-      alt="thumbnail"
-    />
+      <Image
+        src={card.thumbnail ?? ""}
+        height={500}
+        width={500}
+        onLoad={() => setLoaded(true)}
+        className={cn(
+          "object-cover object-top absolute inset-0 h-full w-full transition duration-200 hover:bg-black/70",
+          loaded ? "blur-none" : "blur-md"
+        )}
+        alt="thumbnail"
+      />
+    </div>
   );
 };
 
