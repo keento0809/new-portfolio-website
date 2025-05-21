@@ -1,9 +1,9 @@
-import { composeStory } from "@storybook/react";
 import * as stories from "./Header.stories";
 import { describe, it, expect } from "vitest";
 import { screen } from "@testing-library/react";
+import { composeStories } from "@storybook/react";
 
-const Default = composeStory({}, stories.default);
+const { Default } = composeStories(stories);
 
 describe("Header", () => {
   it("should render the header component", async () => {
