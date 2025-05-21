@@ -4,11 +4,14 @@ import { HeroSection } from "./HeroSection";
 const meta = {
   title: "Components/HeroSection",
   component: HeroSection,
+  parameters: {
+    layout: "fullscreen",
+  },
   decorators: [
     (Story) => (
-      <div>
+      <>
         <Story />
-      </div>
+      </>
     ),
   ],
 } satisfies Meta<typeof HeroSection>;

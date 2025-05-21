@@ -18,7 +18,7 @@ export const Header: FC = () => {
     useHeader();
 
   return (
-    <div className="absolute top-0 lg:top-2 inset-x-0 mx-auto z-40">
+    <header className="absolute top-0 lg:top-2 inset-x-0 mx-auto z-40">
       <Menu>
         {isMenuOpen && (
           <MobileMenu resumeURL={resumeURL} handleClick={handleClickMenu} />
@@ -65,6 +65,6 @@ export const Header: FC = () => {
           ))}
         </div>
       </Menu>
-    </div>
+    </header>
   );
 };
