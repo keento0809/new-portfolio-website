@@ -1,21 +1,25 @@
-"use client";
-
-import { FC } from "react";
-import { Menu } from "../../ui/aceturnityUI/navbarMenu/navbar-menu";
-import { cn } from "@/utils/cn";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useHeader } from "./_hooks/useHeader";
-import { MenuIcon } from "../../icons";
-import { CancelIcon } from "../../icons/cancelIcon";
+import { Menu } from "@/components/ui/aceturnityUI/navbarMenu/navbar-menu";
+import type { Meta, StoryObj } from "@storybook/react";
 import { MobileMenu } from "./_components/MobileMenu";
+import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import { cn } from "../../../utils/cn";
 import { HEADER_MENU_ITEMS } from "./_constants/header";
+import { MenuIcon } from "@/components/icons";
+import { CancelIcon } from "@/components/icons/cancelIcon";
 
-export const Header: FC = () => {
-  const pathname = usePathname();
-  const { resumeURL, isMenuOpen, openMenu, closeMenu, handleClickMenu } =
-    useHeader();
+const HeaderWithMock = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const resumeURL = "https://example.com/resume.pdf";
+  const pathname = "/"; // Mock current path
+
+  const openMenu = () => setMenuOpen(true);
+  const closeMenu = () => setMenuOpen(false);
+  const handleClickMenu = (link: string) => {
+    console.log(`Navigating to: ${link}`);
+    closeMenu();
+  };
 
   return (
     <header className="absolute top-0 lg:top-2 inset-x-0 mx-auto z-40">
@@ -68,3 +72,16 @@ export const Header: FC = () => {
     </header>
   );
 };
+
+const meta = {
+  title: "Components/Layout/Header",
+  component: HeaderWithMock,
+  parameters: {
+    layout: "fullscreen",
+  },
+} satisfies Meta<typeof HeaderWithMock>;
+
+export default meta;
+type Story = StoryObj<typeof HeaderWithMock>;
+
+export const Default: Story = {};
