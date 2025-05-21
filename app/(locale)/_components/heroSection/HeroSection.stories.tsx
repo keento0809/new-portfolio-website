@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { HeroSection } from "./HeroSection";
 
 const meta = {
-  title: "Components/HeroSection",
+  title: "App/Components/HeroSection",
   component: HeroSection,
   parameters: {
     layout: "fullscreen",
