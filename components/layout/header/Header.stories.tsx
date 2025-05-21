@@ -4,7 +4,7 @@ import { MobileMenu } from "./_components/MobileMenu";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { cn } from "@/utils/cn";
+import { cn } from "../../../utils/cn";
 import { HEADER_MENU_ITEMS } from "./_constants/header";
 import { MenuIcon } from "@/components/icons";
 import { CancelIcon } from "@/components/icons/cancelIcon";
